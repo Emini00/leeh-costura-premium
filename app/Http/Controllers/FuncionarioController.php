@@ -9,7 +9,7 @@ class FuncionarioController extends Controller
 {
     public Function index()
     {
-        return 'pagina de funcionários';
+       return view('funcionarios.index');
     }
       
 }
