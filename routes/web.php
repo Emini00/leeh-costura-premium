@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FuncionarioController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', [FuncionarioController::class, 'index']);
 
-Route::get('/funcionarios', [FuncionarioController::class, 'index']);
+Route::get('/login', function () {
+    return view('auth.login');
+});
