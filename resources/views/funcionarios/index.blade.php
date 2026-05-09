@@ -23,7 +23,7 @@
                <div class="employee-item">
 
     <div class="employee-top">
-        <strong>Maria Aparecida</strong>
+        <strong>larissa</strong>
 
         <span class="employee-status">
             Ativa
@@ -40,11 +40,25 @@
 
 </div>
 
-                <div class="employee-item">
-                    <strong>Ana Souza</strong>
-                    <span>Acabamento</span>
-                    <small>Telefone: (67) 98888-8888</small>
-                </div>
+               <div class="employee-item">
+
+    <div class="employee-top">
+        <strong>Daniel</strong>
+
+        <span class="employee-status">
+            Ativa
+        </span>
+    </div>
+
+    <span>Costureiro</span>
+
+    <small>Telefone: (67) 99999-9999</small>
+
+    <a href="#" class="edit-link">
+        Editar
+    </a>
+
+</div>
             </div>
         </div>
 

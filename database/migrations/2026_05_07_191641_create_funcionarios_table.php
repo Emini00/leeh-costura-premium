@@ -11,20 +11,25 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('funcionarios', function (Blueprint $table) {
+       Schema::create('funcionarios', function (Blueprint $table) {
 
-            $table->id();
+    $table->id();
 
-            $table->string('nome');
-            $table->string('telefone')->nullable();
-            $table->string('email')->unique();
-            $table->string('senha');
+    $table->string('nome');
 
-            $table->decimal('valor_por_peca', 10, 2)->default(0);
+    $table->string('telefone')->nullable();
 
-            $table->timestamps();
+    $table->string('cargo')->nullable();
 
-        });
+    $table->string('usuario')->unique();
+
+    $table->string('senha');
+
+    $table->decimal('valor_por_peca', 10, 2)->default(0);
+
+    $table->timestamps();
+
+});
     }
 
     /**
