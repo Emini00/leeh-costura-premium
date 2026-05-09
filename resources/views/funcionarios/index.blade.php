@@ -3,70 +3,50 @@
 @section('title', 'Funcionários | Leeh Costura Premium')
 
 @section('content')
-    <section class="hero">
-        <div class="hero-card">
-           <div class="hero-content">
+    <section class="page-container">
 
-    <div class="hero-text">
-        <p class="welcome">Bem-vinda ao</p>
-
-        <h1>LEEH COSTURA PREMIUM</h1>
-
-        <p class="subtitle">
-            Gestão completa para o seu negócio de costura
-        </p>
-
-        <div class="cards">
-            <div class="card">
-                <h3>Funcionários</h3>
-                <p>Gerencie sua equipe</p>
-                <a href="#">Acessar</a>
+        <div class="page-header">
+            <div>
+                <h1>Funcionários</h1>
+                <p>Gerencie a equipe da facção de costura.</p>
             </div>
 
-            <div class="card">
-                <h3>Clientes</h3>
-                <p>Cadastre e gerencie seus clientes</p>
-                <a href="#">Acessar</a>
-            </div>
+            <a href="/funcionarios/create" class="primary-button">
+                + Cadastrar
+            </a>
         </div>
+
+        <div class="table-card">
+            <h2>Lista de Funcionários</h2>
+
+            <div class="employee-list">
+               <div class="employee-item">
+
+    <div class="employee-top">
+        <strong>Maria Aparecida</strong>
+
+        <span class="employee-status">
+            Ativa
+        </span>
     </div>
 
-   
+    <span>Costureira</span>
+
+    <small>Telefone: (67) 99999-9999</small>
+
+    <a href="#" class="edit-link">
+        Editar
+    </a>
 
 </div>
-            <p class="welcome">Bem-vinda ao</p>
 
-            <h1>LEEH COSTURA PREMIUM</h1>
-
-            <p class="subtitle">
-                Gestão completa para o seu negócio de costura
-            </p>
-
-            <div class="cards">
-                <div class="card">
-                    <h3>Funcionários</h3>
-                    <p>Gerencie sua equipe</p>
-                    <a href="#">Acessar</a>
-                </div>
-
-                <div class="card">
-                    <h3>Clientes</h3>
-                    <p>Cadastre e gerencie seus clientes</p>
-                    <a href="#">Acessar</a>
-                </div>
-
-                <div class="card">
-                    <h3>Serviços</h3>
-                    <p>Gerencie serviços e orçamentos</p>
-                    <a href="#">Acessar</a>
-                </div>
-
-                <div class="card">
-                    <h3>Relatórios</h3>
-                    <p>Acompanhe seu negócio</p>
-                    <a href="#">Acessar</a>
+                <div class="employee-item">
+                    <strong>Ana Souza</strong>
+                    <span>Acabamento</span>
+                    <small>Telefone: (67) 98888-8888</small>
                 </div>
             </div>
         </div>
+
     </section>
 @endsection
