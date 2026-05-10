@@ -11,13 +11,18 @@
 
             @csrf
 
-            <input type="text" name="nome" placeholder="Nome do funcionário">
-            <input type="text" name="telefone" placeholder="Telefone">
-            <input type="text" name="cargo" placeholder="Cargo">
-            <input type="text" name="usuario" placeholder="Usuário">
-            <input type="password" name="senha" placeholder="Senha">
 
-            <button type="submit">
+            <input type="text" name="nome" placeholder="Nome do funcionário" required>
+
+            <input type="text" name="telefone" placeholder="Telefone" required>
+
+            <input type="text" name="cargo" placeholder="Cargo" required>
+
+            <input type="text" name="usuario" placeholder="Usuário" required>
+
+            <input type="password" name="senha" placeholder="Senha" required>
+
+            <button type="submit" class="cadastrar-btn">
                 Salvar Funcionário
             </button>
 

@@ -31,5 +31,41 @@ class FuncionarioController extends Controller
 
         return redirect('/funcionarios');
     }
+    public function edit($id)
+{
+    $funcionario = Funcionario::findOrFail($id);
+
+    return view('funcionarios.edit', compact('funcionario'));
+}
+public function update(Request $request, $id)
+{
+    $funcionario = Funcionario::findOrFail($id);
+
+    $dados = [
+        'nome' => $request->nome,
+        'telefone' => $request->telefone,
+        'cargo' => $request->cargo,
+        'usuario' => $request->usuario,
+    ];
+
+    if ($request->filled('senha')) {
+        $dados['senha'] = $request->senha;
+    }
+
+    $funcionario->update($dados);
+
+    return redirect('/funcionarios');
+}  
+
+public function destroy($id)
+{
+    $funcionario = Funcionario::findOrFail($id);
+
+    $funcionario->delete();
+
+    return redirect('/funcionarios');
+}
+
+
 }
 

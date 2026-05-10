@@ -16,5 +16,13 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/funcionarios', [FuncionarioController::class, 'index']);
+
 Route::get('/funcionarios/create', [FuncionarioController::class, 'create']);
+
 Route::post('/funcionarios', [FuncionarioController::class, 'store']);
+
+Route::get('/funcionarios/{id}/edit', [FuncionarioController::class, 'edit']);
+
+Route::put('/funcionarios/{id}', [FuncionarioController::class, 'update']);
+
+Route::delete('/funcionarios/{id}', [FuncionarioController::class, 'destroy']);

@@ -216,13 +216,22 @@ body {
     margin-bottom: 25px;
 }
 
-.primary-button {
+.primary-button{
     display: inline-block;
     background: #7b2d26;
     color: white;
     padding: 14px 22px;
     border-radius: 12px;
     text-decoration: none;
+    border: none;
+    min-width: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-button:hover{
+    background: #5c1f1a;
 }
 
 /* FORMULÁRIOS */
@@ -323,12 +332,3 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
-
-.edit-link{
-    margin-top: 10px;
-    color: #701F35;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
