@@ -7,13 +7,15 @@
 
         <h1>Cadastrar Funcionário</h1>
 
-        <form class="form-container">
+        <form action="/funcionarios" method="POST" class="form-container">
 
-            <input type="text" placeholder="Nome do funcionário">
+            @csrf
 
-            <input type="text" placeholder="Telefone">
-
-            <input type="text" placeholder="Cargo">
+            <input type="text" name="nome" placeholder="Nome do funcionário">
+            <input type="text" name="telefone" placeholder="Telefone">
+            <input type="text" name="cargo" placeholder="Cargo">
+            <input type="text" name="usuario" placeholder="Usuário">
+            <input type="password" name="senha" placeholder="Senha">
 
             <button type="submit">
                 Salvar Funcionário

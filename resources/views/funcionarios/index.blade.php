@@ -19,48 +19,33 @@
         <div class="table-card">
             <h2>Lista de Funcionários</h2>
 
-            <div class="employee-list">
-               <div class="employee-item">
+          <div class="employee-list">
 
-    <div class="employee-top">
-        <strong>larissa</strong>
+    @foreach($funcionarios as $funcionario)
 
-        <span class="employee-status">
-            Ativa
-        </span>
-    </div>
+        <div class="employee-item">
 
-    <span>Costureira</span>
+            <div class="employee-top">
+                <strong>{{ $funcionario->nome }}</strong>
 
-    <small>Telefone: (67) 99999-9999</small>
-
-    <a href="#" class="edit-link">
-        Editar
-    </a>
-
-</div>
-
-               <div class="employee-item">
-
-    <div class="employee-top">
-        <strong>Daniel</strong>
-
-        <span class="employee-status">
-            Ativa
-        </span>
-    </div>
-
-    <span>Costureiro</span>
-
-    <small>Telefone: (67) 99999-9999</small>
-
-    <a href="#" class="edit-link">
-        Editar
-    </a>
-
-</div>
+                <span class="employee-status">
+                    Ativa
+                </span>
             </div>
+
+            <span>{{ $funcionario->cargo }}</span>
+
+            <small>
+                Telefone: {{ $funcionario->telefone }}
+            </small>
+
+            <a href="#" class="edit-link">
+                Editar
+            </a>
+
         </div>
 
-    </section>
-@endsection
+    @endforeach
+
+</div>
+

@@ -16,5 +16,5 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/funcionarios', [FuncionarioController::class, 'index']);
-
 Route::get('/funcionarios/create', [FuncionarioController::class, 'create']);
+Route::post('/funcionarios', [FuncionarioController::class, 'store']);

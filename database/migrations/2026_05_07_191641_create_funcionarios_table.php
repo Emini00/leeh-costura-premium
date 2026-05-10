@@ -25,8 +25,6 @@ return new class extends Migration
 
     $table->string('senha');
 
-    $table->decimal('valor_por_peca', 10, 2)->default(0);
-
     $table->timestamps();
 
 });
