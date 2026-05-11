@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FuncionarioController;
-
+use App\Http\Controllers\LoginController;
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -26,3 +26,10 @@ Route::get('/funcionarios/{id}/edit', [FuncionarioController::class, 'edit']);
 Route::put('/funcionarios/{id}', [FuncionarioController::class, 'update']);
 
 Route::delete('/funcionarios/{id}', [FuncionarioController::class, 'destroy']);
+
+
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout']);
+

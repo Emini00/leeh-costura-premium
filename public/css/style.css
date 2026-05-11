@@ -188,14 +188,6 @@ body {
 .dashboard-card:hover {
     transform: translateY(-5px);
 }
-.dashboard-card{
-    
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-
-    border-left: 6px solid #701F35;
-}
 
 /* PÁGINAS INTERNAS */
 

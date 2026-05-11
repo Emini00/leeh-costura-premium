@@ -4,30 +4,31 @@
 
 @section('content')
 
-<section class="login-page">
+    <section class="login-page">
 
-    <div class="login-box">
+        <div class="login-box">
 
-        <h1>LEEH COSTURA</h1>
+            <h1>LEEH COSTURA</h1>
 
-        <p>
-            Gestão inteligente para sua facção de costura.
-        </p>
+            <p>
+                Gestão inteligente para sua facção de costura.
+            </p>
 
-        <form>
+            <form action="/login" method="POST">
 
-            <input type="email" placeholder="E-mail">
+                @csrf
 
-            <input type="password" placeholder="Senha">
+                <input type="text" name="usuario" placeholder="Usuário" required>
 
-            <button type="submit">
-                Entrar
-            </button>
+                <input type="password" name="senha" placeholder="Senha" required>
 
-        </form>
+                <button type="submit" class="primary-button">
+                    Entrar
+                </button>
+            </form>
 
-    </div>
+        </div>
 
-</section>
+    </section>
 
 @endsection
