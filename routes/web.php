@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FuncionarioController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ClienteController;
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -33,3 +35,12 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
+
+Route::get('/clientes', [ClienteController::class, 'index']);
+Route::get('/clientes/create', [ClienteController::class, 'create']);
+Route::post('/clientes', [ClienteController::class, 'store']);
+
+Route::get('/clientes/{id}/edit', [ClienteController::class, 'edit']);
+Route::put('/clientes/{id}', [ClienteController::class, 'update']);
+
+Route::delete('/clientes/{id}', [ClienteController::class, 'destroy']);
