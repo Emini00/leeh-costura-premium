@@ -428,3 +428,25 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* USUÁRIO NAVBAR */
+
+.nav-user{
+    color: white;
+    padding: 10px;
+    opacity: 0.9;
+}
+
+.logout-form{
+    margin: 0;
+}
+
+.logout-button{
+    background: white;
+    color: #701F35;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}

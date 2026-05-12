@@ -28,11 +28,10 @@ class LoginController extends Controller
         return redirect('/login');
     }
 
-    public function logout()
-    {
-        session()->forget('funcionario_id');
-        session()->forget('funcionario_nome');
+   public function logout()
+{
+    session()->flush();
 
-        return redirect('/login');
-    }
+    return redirect('/login');
+}
 }

@@ -9,13 +9,15 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/login', function () {
-    return view('auth.login');
-});
 
 Route::get('/dashboard', function () {
+    if (!session('funcionario_id')) {
+        return redirect('/login');
+    }
+
     return view('dashboard.index');
 });
+
 
 Route::get('/funcionarios', [FuncionarioController::class, 'index']);
 

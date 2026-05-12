@@ -11,33 +11,65 @@
 
 <body>
 
-    <header class="main-header">
-    <div class="logo">
-        LEEH COSTURA
-    </div>
+    @if(session('funcionario_id'))
 
-    <input type="checkbox" id="menu-toggle">
+        <header class="main-header">
 
-    <label for="menu-toggle" class="menu-button">
-        ☰
-    </label>
+            <div class="logo">
+                LEEH COSTURA
+            </div>
 
-    <nav class="main-nav">
-        <a href="/dashboard">Dashboard</a>
-        <a href="/funcionarios">Funcionários</a>
-        <a href="/clientes">Clientes</a>
-        <a href="#">Serviços</a>
-        <a href="#">Pagamentos</a>
-    </nav>
-</header>
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="menu-button">
+                ☰
+            </label>
+
+            <nav class="main-nav">
+
+                <a href="/dashboard">Início</a>
+
+                <a href="/funcionarios">Funcionários</a>
+
+                <a href="/clientes">Clientes</a>
+
+                <a href="#">Serviços</a>
+
+                <a href="#">Pagamentos</a>
+
+                <span class="nav-user">
+                    Olá, {{ session('funcionario_nome') }}
+                </span>
+
+                <form action="/logout" method="POST" class="logout-form">
+
+                    @csrf
+
+                    <button type="submit" class="logout-button">
+                        Sair
+                    </button>
+
+                </form>
+
+            </nav>
+
+        </header>
+
+    @endif
 
     <main>
         @yield('content')
     </main>
 
-    <footer class="main-footer">
-        <p>© 2026 Leeh Costura Premium. Todos os direitos reservados.</p>
-    </footer>
+    @if(session('funcionario_id'))
+
+        <footer class="main-footer">
+            <p>
+                © 2026 Leeh Costura Premium. Todos os direitos reservados.
+            </p>
+        </footer>
+
+    @endif
 
 </body>
 
