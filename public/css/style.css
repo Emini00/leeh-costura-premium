@@ -79,10 +79,9 @@ body {
     box-sizing: border-box;
 
     background:
-        linear-gradient(rgba(245, 241, 235, 0.45),
-            rgba(245, 241, 235, 0.45)),
-        url('/images/sofa-azul.jpg');
-
+        linear-gradient(rgba(30, 20, 20, 0.45),
+        rgba(30, 20, 20, 0.45)),
+    url('/images/facção-de-sofas.png');
     background-size: cover;
     background-position: center;
 }
@@ -323,4 +322,109 @@ body {
     border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
+}
+
+/* HEADER */
+
+.main-header{
+    background: #701F35;
+    color: white;
+    padding: 18px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+/* LAYOUT GLOBAL */
+.logo{
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.main-nav{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.main-nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover{
+    background: rgba(255,255,255,0.12);
+}
+
+/* FOOTER */
+
+.main-footer{
+    background: #701F35;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+/* MENU MOBILE */
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-button{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+
+    .menu-button{
+        display: block;
+    }
+
+    .main-nav{
+        position: fixed;
+        top: 0;
+        right: -250px;
+
+        width: 250px;
+        height: 100vh;
+
+        background: #701F35;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 80px 20px;
+        box-sizing: border-box;
+
+        transition: 0.3s;
+
+        z-index: 999;
+    }
+
+    .main-nav a{
+        width: 100%;
+    }
+
+    #menu-toggle:checked ~ .main-nav{
+        right: 0;
+    }
+
+    .dashboard-cards,
+    .cards{
+        grid-template-columns: 1fr;
+    }
 }
