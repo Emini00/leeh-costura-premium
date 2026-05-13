@@ -16,7 +16,7 @@
         <header class="main-header">
 
             <div class="logo">
-                LEEH COSTURA
+                <img src="{{ asset('images/logo-4.png') }}" alt="Leeh Costura Premium">
             </div>
 
             <input type="checkbox" id="menu-toggle">

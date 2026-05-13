@@ -8,12 +8,9 @@
 
         <div class="login-box">
 
-            <h1>LEEH COSTURA</h1>
+            <h1>LEEH COSTURA PREMIUM</h1>
 
-            <p>
-                Gestão inteligente para sua facção de costura.
-            </p>
-
+           
             <form action="/login" method="POST">
 
                 @csrf
