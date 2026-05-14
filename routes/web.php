@@ -4,19 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FuncionarioController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
     return view('auth.login');
 });
 
 
-Route::get('/dashboard', function () {
-    if (!session('funcionario_id')) {
-        return redirect('/login');
-    }
-
-    return view('dashboard.index');
-});
+Route::get('/dashboard', [DashboardController::class, 'index']);
 
 
 Route::get('/funcionarios', [FuncionarioController::class, 'index']);

@@ -1,44 +1,37 @@
 @extends('layouts.app')
 
-@section('title', 'Editar Cliente')
+@section('title', 'Cadastrar Cliente')
 
 @section('content')
 
 <section class="page-container">
 
-    <h1>Editar Cliente</h1>
+    <h1>Cadastrar Cliente</h1>
 
-    <form action="/clientes/{{ $cliente->id }}"
-        method="POST"
-        class="form-container">
+    <form action="/clientes" method="POST" class="form-container">
 
         @csrf
-        @method('PUT')
 
         <input type="text"
             name="nome"
-            value="{{ $cliente->nome }}"
             placeholder="Nome do cliente"
             required>
 
         <input type="text"
             name="telefone"
-            value="{{ $cliente->telefone }}"
             placeholder="Telefone"
             required>
 
         <input type="email"
             name="email"
-            value="{{ $cliente->email }}"
             placeholder="E-mail">
 
         <input type="text"
             name="cidade"
-            value="{{ $cliente->cidade }}"
             placeholder="Cidade">
 
         <button type="submit" class="cadastrar-btn">
-            Atualizar Cliente
+            Salvar Cliente
         </button>
 
     </form>

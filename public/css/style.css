@@ -194,6 +194,13 @@ body {
 .dashboard-card:hover {
     transform: translateY(-5px);
 }
+.dashboard-number{
+    font-size: 42px;
+    font-weight: bold;
+    color: #701F35;
+
+    margin: 10px 0;
+}
 
 /* PÁGINAS INTERNAS */
 
