@@ -53,8 +53,8 @@
                 <h3>Serviços</h3>
                 <p>Produção e pedidos em andamento</p>
 
-                <a href="#" class="primary-button">
-                    Em breve
+                <a href="/servicos" class="primary-button">
+                    Gerenciar
                 </a>
             </div>
 

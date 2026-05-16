@@ -33,7 +33,7 @@
 
                 <a href="/clientes">Clientes</a>
 
-                <a href="#">Serviços</a>
+               <a href="/servicos">Serviços</a>
 
                 <a href="#">Pagamentos</a>
 
