@@ -7,7 +7,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\CargaController;
-
+use App\Http\Controllers\FabricaController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -46,3 +46,10 @@ Route::post('/cargas', [CargaController::class, 'store']);
 Route::get('/cargas/{id}/edit', [CargaController::class, 'edit']);
 Route::put('/cargas/{id}', [CargaController::class, 'update']);
 Route::delete('/cargas/{id}', [CargaController::class, 'destroy']);
+
+Route::get('/fabricas', [FabricaController::class, 'index']);
+Route::get('/fabricas/create', [FabricaController::class, 'create']);
+Route::post('/fabricas', [FabricaController::class, 'store']);
+Route::get('/fabricas/{id}/edit', [FabricaController::class, 'edit']);
+Route::put('/fabricas/{id}', [FabricaController::class, 'update']);
+Route::delete('/fabricas/{id}', [FabricaController::class, 'destroy']);

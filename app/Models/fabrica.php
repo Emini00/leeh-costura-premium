@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class fabrica extends Model
 {
-    //
+     protected $fillable = [
+        'nome',
+        'telefone',
+        'cidade',
+        'observacoes',
+    ];
 }

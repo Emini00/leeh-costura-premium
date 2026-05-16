@@ -86,6 +86,13 @@
                         <a href="/servicos/create">
                             Novo Serviço
                         </a>
+                        <a href="/fabricas">
+                            Fábricas
+                        </a>
+
+                        <a href="/fabricas/create">
+                            Nova Fábrica
+                        </a>
 
                         <a href="/cargas">
                             Cargas
