@@ -27,15 +27,81 @@
 
             <nav class="main-nav">
 
-                <a href="/dashboard">Início</a>
+                <a href="/dashboard">
+                    Início
+                </a>
 
-                <a href="/funcionarios">Funcionários</a>
+                <div class="nav-dropdown">
 
-                <a href="/clientes">Clientes</a>
+                    <button class="dropdown-button">
+                        Funcionários
+                    </button>
 
-               <a href="/servicos">Serviços</a>
+                    <div class="dropdown-content">
 
-                <a href="#">Pagamentos</a>
+                        <a href="/funcionarios">
+                            Lista de Funcionários
+                        </a>
+
+                        <a href="/funcionarios/create">
+                            Cadastrar Funcionário
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="nav-dropdown">
+
+                    <button class="dropdown-button">
+                        Clientes
+                    </button>
+
+                    <div class="dropdown-content">
+
+                        <a href="/clientes">
+                            Lista de Clientes
+                        </a>
+
+                        <a href="/clientes/create">
+                            Cadastrar Cliente
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="nav-dropdown">
+
+                    <button class="dropdown-button">
+                        Serviços
+                    </button>
+
+                    <div class="dropdown-content">
+
+                        <a href="/servicos">
+                            Lista de Serviços
+                        </a>
+
+                        <a href="/servicos/create">
+                            Novo Serviço
+                        </a>
+
+                        <a href="/cargas">
+                            Cargas
+                        </a>
+
+                        <a href="/cargas/create">
+                            Nova Carga
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a href="#">
+                    Pagamentos
+                </a>
 
                 <span class="nav-user">
                     Olá, {{ session('funcionario_nome') }}
