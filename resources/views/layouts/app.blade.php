@@ -71,6 +71,9 @@
 
     @endif
 
+
+    <script src="{{ asset('js/servicos.js') }}"></script>
+
 </body>
 
 </html>

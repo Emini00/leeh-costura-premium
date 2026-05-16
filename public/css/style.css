@@ -255,6 +255,19 @@ body {
     font-size: 16px;
     box-sizing: border-box;
 }
+.form-container select{
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+
+    background: white;
+}
 
 .form-container button {
     background: #7b2d26;

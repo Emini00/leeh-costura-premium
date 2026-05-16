@@ -2,64 +2,64 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Carga;
 use Illuminate\Http\Request;
+use App\Models\Carga;
 
 class CargaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $cargas = Carga::all();
+
+        return view('cargas.index', compact('cargas'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('cargas.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        Carga::create([
+            'fabrica_id' => $request->fabrica_id,
+            'modelo' => $request->modelo,
+            'quantidade' => $request->quantidade,
+            'valor_unitario' => $request->valor_unitario,
+            'status' => $request->status,
+        ]);
+
+        return redirect('/cargas');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Carga $carga)
+    public function edit($id)
     {
-        //
+        $carga = Carga::findOrFail($id);
+
+        return view('cargas.edit', compact('carga'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Carga $carga)
+    public function update(Request $request, $id)
     {
-        //
+        $carga = Carga::findOrFail($id);
+
+        $carga->update([
+            'fabrica_id' => $request->fabrica_id,
+            'modelo' => $request->modelo,
+            'quantidade' => $request->quantidade,
+            'valor_unitario' => $request->valor_unitario,
+            'status' => $request->status,
+        ]);
+
+        return redirect('/cargas');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Carga $carga)
+    public function destroy($id)
     {
-        //
-    }
+        $carga = Carga::findOrFail($id);
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Carga $carga)
-    {
-        //
+        $carga->delete();
+
+        return redirect('/cargas');
     }
 }

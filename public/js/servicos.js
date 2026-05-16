@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    alert('JS carregou');
+   
 
     const quantidade = document.getElementById('quantidade');
     const valorUnitario = document.getElementById('valor_unitario');

@@ -30,7 +30,24 @@
 
             </select>
 
-            <input type="number" name="carga_id" placeholder="ID Carga" required>
+            <select name="carga_id" required>
+
+                <option value="">
+                    Selecione a Carga
+                </option>
+
+                @foreach($cargas as $carga)
+
+                    <option value="{{ $carga->id }}">
+
+                        Carga #{{ $carga->id }}
+                        - {{ $carga->modelo }}
+
+                    </option>
+
+                @endforeach
+
+            </select>
 
             <input type="text" name="nome_sofa" placeholder="Nome do sofá">
 
@@ -40,12 +57,12 @@
 
             <input type="text" name="tecido" placeholder="Tipo de tecido">
 
-            <input type="number" name="quantidade"  id="quantidade" placeholder="Quantidade" required>
+            <input type="number" name="quantidade" id="quantidade" placeholder="Quantidade" required>
 
 
             <input type="number" step="0.01" name="valor_unitario" id="valor_unitario" placeholder="Valor Unitário">
-            
-           <input type="number" step="0.01" name="valor_total" id="valor_total" placeholder="Valor Total" readonly>
+
+            <input type="number" step="0.01" name="valor_total" id="valor_total" placeholder="Valor Total" readonly>
 
             <textarea name="observacoes" placeholder="Observações"></textarea>
 

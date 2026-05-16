@@ -18,7 +18,12 @@ class ServicoController extends Controller
     {
         $funcionarios = \App\Models\Funcionario::all();
 
-        return view('servicos.create', compact('funcionarios'));
+        $cargas = \App\Models\Carga::all();
+
+        return view('servicos.create', compact(
+            'funcionarios',
+            'cargas'
+        ));
     }
 
     public function store(Request $request)
@@ -42,16 +47,16 @@ class ServicoController extends Controller
     }
 
     public function edit($id)
-{
-    $servico = Servico::findOrFail($id);
+    {
+        $servico = Servico::findOrFail($id);
 
-    $funcionarios = \App\Models\Funcionario::all();
+        $funcionarios = \App\Models\Funcionario::all();
 
-    return view('servicos.edit', compact(
-        'servico',
-        'funcionarios'
-    ));
-}
+        return view('servicos.edit', compact(
+            'servico',
+            'funcionarios'
+        ));
+    }
     public function update(Request $request, $id)
     {
         $servico = Servico::findOrFail($id);
