@@ -4,63 +4,58 @@
 
 @section('content')
 
-<section class="page-container">
+    <section class="page-container">
 
-    <h1>Editar Carga</h1>
+        <h1>Editar Carga</h1>
 
-    <form action="/cargas/{{ $carga->id }}"
-        method="POST"
-        class="form-container">
+        <form action="/cargas/{{ $carga->id }}" method="POST" class="form-container">
 
-        @csrf
-        @method('PUT')
+            @csrf
+            @method('PUT')
 
-        <input type="number"
-            name="fabrica_id"
-            value="{{ $carga->fabrica_id }}"
-            required>
+            <select name="fabrica_id" required>
 
-        <input type="text"
-            name="modelo"
-            value="{{ $carga->modelo }}"
-            required>
+                @foreach($fabricas as $fabrica)
 
-        <input type="number"
-            name="quantidade"
-            value="{{ $carga->quantidade }}"
-            required>
+                    <option value="{{ $fabrica->id }}" {{ $carga->fabrica_id == $fabrica->id ? 'selected' : '' }}>
 
-        <input type="number"
-            step="0.01"
-            name="valor_unitario"
-            value="{{ $carga->valor_unitario }}"
-            required>
+                        {{ $fabrica->nome }}
 
-        <select name="status">
+                    </option>
 
-            <option value="pendente"
-                {{ $carga->status == 'pendente' ? 'selected' : '' }}>
-                Pendente
-            </option>
+                @endforeach
 
-            <option value="em_producao"
-                {{ $carga->status == 'em_producao' ? 'selected' : '' }}>
-                Em Produção
-            </option>
+            </select>
+            <input type="text" name="numero" value="{{ $carga->numero }}" placeholder="Número da carga">
 
-            <option value="finalizado"
-                {{ $carga->status == 'finalizado' ? 'selected' : '' }}>
-                Finalizado
-            </option>
+            <input type="text" name="modelo" value="{{ $carga->modelo }}" required>
 
-        </select>
+            <input type="number" name="quantidade" value="{{ $carga->quantidade }}" required>
 
-        <button type="submit" class="cadastrar-btn">
-            Atualizar Carga
-        </button>
+            <input type="number" step="0.01" name="valor_unitario" value="{{ $carga->valor_unitario }}" required>
 
-    </form>
+            <select name="status">
 
-</section>
+                <option value="pendente" {{ $carga->status == 'pendente' ? 'selected' : '' }}>
+                    Pendente
+                </option>
+
+                <option value="em_producao" {{ $carga->status == 'em_producao' ? 'selected' : '' }}>
+                    Em Produção
+                </option>
+
+                <option value="finalizado" {{ $carga->status == 'finalizado' ? 'selected' : '' }}>
+                    Finalizado
+                </option>
+
+            </select>
+
+            <button type="submit" class="cadastrar-btn">
+                Atualizar Carga
+            </button>
+
+        </form>
+
+    </section>
 
 @endsection

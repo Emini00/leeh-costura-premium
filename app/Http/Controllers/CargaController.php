@@ -15,14 +15,19 @@ class CargaController extends Controller
     }
 
     public function create()
-    {
-        return view('cargas.create');
+    { {
+            $fabricas = \App\Models\Fabrica::all();
+
+            return view('cargas.create', compact('fabricas'));
+        }
+        ;
     }
 
     public function store(Request $request)
     {
         Carga::create([
             'fabrica_id' => $request->fabrica_id,
+            'numero' => $request->numero,
             'modelo' => $request->modelo,
             'quantidade' => $request->quantidade,
             'valor_unitario' => $request->valor_unitario,
@@ -32,12 +37,14 @@ class CargaController extends Controller
         return redirect('/cargas');
     }
 
-    public function edit($id)
-    {
-        $carga = Carga::findOrFail($id);
+   public function edit($id)
+{
+    $carga = Carga::findOrFail($id);
 
-        return view('cargas.edit', compact('carga'));
-    }
+    $fabricas = \App\Models\Fabrica::all();
+
+    return view('cargas.edit', compact('carga', 'fabricas'));
+}
 
     public function update(Request $request, $id)
     {
@@ -45,6 +52,7 @@ class CargaController extends Controller
 
         $carga->update([
             'fabrica_id' => $request->fabrica_id,
+            'numero' => $request->numero,
             'modelo' => $request->modelo,
             'quantidade' => $request->quantidade,
             'valor_unitario' => $request->valor_unitario,

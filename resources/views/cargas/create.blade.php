@@ -4,59 +4,61 @@
 
 @section('content')
 
-<section class="page-container">
+    <section class="page-container">
 
-    <h1>Nova Carga</h1>
+        <h1>Nova Carga</h1>
 
-    <form action="/cargas"
-        method="POST"
-        class="form-container">
+        <form action="/cargas" method="POST" class="form-container">
 
-        @csrf
+            @csrf
 
-        <input type="number"
-            name="fabrica_id"
-            placeholder="ID da Fábrica"
-            required>
+            <select name="fabrica_id" required>
 
-        <input type="text"
-            name="modelo"
-            placeholder="Modelo do sofá"
-            required>
+                <option value="">
+                    Selecione a Fábrica
+                </option>
 
-        <input type="number"
-            name="quantidade"
-            placeholder="Quantidade"
-            required>
+                @foreach($fabricas as $fabrica)
 
-        <input type="number"
-            step="0.01"
-            name="valor_unitario"
-            placeholder="Valor Unitário"
-            required>
+                    <option value="{{ $fabrica->id }}">
 
-        <select name="status">
+                        {{ $fabrica->nome }}
 
-            <option value="pendente">
-                Pendente
-            </option>
+                    </option>
 
-            <option value="em_producao">
-                Em Produção
-            </option>
+                @endforeach
 
-            <option value="finalizado">
-                Finalizado
-            </option>
+            </select>
+            <input type="text" name="numero" placeholder="Número da carga">
 
-        </select>
+            <input type="text" name="modelo" placeholder="Modelo do sofá" required>
 
-        <button type="submit" class="cadastrar-btn">
-            Salvar Carga
-        </button>
+            <input type="number" name="quantidade" placeholder="Quantidade" required>
 
-    </form>
+            <input type="number" step="0.01" name="valor_unitario" placeholder="Valor Unitário" required>
 
-</section>
+            <select name="status">
+
+                <option value="pendente">
+                    Pendente
+                </option>
+
+                <option value="em_producao">
+                    Em Produção
+                </option>
+
+                <option value="finalizado">
+                    Finalizado
+                </option>
+
+            </select>
+
+            <button type="submit" class="cadastrar-btn">
+                Salvar Carga
+            </button>
+
+        </form>
+
+    </section>
 
 @endsection

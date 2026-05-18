@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Carga extends Model
 {
-    //
+    protected $fillable = [
+        'fabrica_id',
+        'numero',
+        'modelo',
+        'quantidade',
+        'valor_unitario',
+        'status',
+    ]; 
 }

@@ -4,79 +4,79 @@
 
 @section('content')
 
-<section class="page-container">
+    <section class="page-container">
 
-    <div class="page-header">
+        <div class="page-header">
 
-        <h1>Cargas</h1>
+            <h1>Cargas</h1>
 
-        <a href="/cargas/create" class="primary-button">
-            + Nova Carga
-        </a>
+            <a href="/cargas/create" class="primary-button">
+                + Nova Carga
+            </a>
 
-    </div>
+        </div>
 
-    <div class="employee-list">
+        <div class="employee-list">
 
-        @foreach($cargas as $carga)
+            @foreach($cargas as $carga)
 
-            <div class="employee-item">
+                <div class="employee-item">
 
-                <div class="employee-top">
+                    <div class="employee-top">
 
-                    <strong>
-                        {{ $carga->modelo }}
-                    </strong>
+                        <strong>
+                            Carga Nº {{ $carga->numero }}
+                        </strong>
 
-                    <span class="employee-status">
-                        {{ $carga->status }}
+                        <span>
+                            {{ $carga->modelo }}
+                        </span>
+
+                        <span class="employee-status">
+                            {{ $carga->status }}
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Quantidade:
+                        {{ $carga->quantidade }}
                     </span>
 
-                </div>
+                    <small>
+                        Valor Unitário:
+                        R$ {{ $carga->valor_unitario }}
+                    </small>
 
-                <span>
-                    Quantidade:
-                    {{ $carga->quantidade }}
-                </span>
+                    <div>
 
-                <small>
-                    Valor Unitário:
-                    R$ {{ $carga->valor_unitario }}
-                </small>
+                        <a href="/cargas/{{ $carga->id }}/edit" class="primary-button">
 
-                <div>
+                            Editar
 
-                    <a href="/cargas/{{ $carga->id }}/edit"
-                        class="primary-button">
+                        </a>
 
-                        Editar
+                        <form action="/cargas/{{ $carga->id }}" method="POST" style="display:inline;">
 
-                    </a>
+                            @csrf
+                            @method('DELETE')
 
-                    <form action="/cargas/{{ $carga->id }}"
-                        method="POST"
-                        style="display:inline;">
+                            <button type="submit" class="primary-button">
 
-                        @csrf
-                        @method('DELETE')
+                                Excluir
 
-                        <button type="submit"
-                            class="primary-button">
+                            </button>
 
-                            Excluir
+                        </form>
 
-                        </button>
-
-                    </form>
+                    </div>
 
                 </div>
 
-            </div>
+            @endforeach
 
-        @endforeach
+        </div>
 
-    </div>
-
-</section>
+    </section>
 
 @endsection
