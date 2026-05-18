@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('cargas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('fabrica_id')->constrained()->onDelete('cascade');
+            $table->foreignId('fabrica_id')
+                ->constrained('fabricas')
+                ->cascadeOnDelete();
             $table->string('modelo');
             $table->integer('quantidade');
             $table->decimal('valor_unitario', 10, 2);
