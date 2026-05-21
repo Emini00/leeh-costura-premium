@@ -13,26 +13,45 @@
             @csrf
             @method('PUT')
 
-            <input type="number" name="funcionario_id" value="{{ $servico->funcionario_id }}" required>
+            <label>Funcionário</label>
+            <select name="funcionario_id" required>
+                @foreach($funcionarios as $funcionario)
+                    <option value="{{ $funcionario->id }}" {{ $servico->funcionario_id == $funcionario->id ? 'selected' : '' }}>
+                        {{ $funcionario->nome }}
+                    </option>
+                @endforeach
+            </select>
 
+            <label>Carga</label>
             <input type="number" name="carga_id" value="{{ $servico->carga_id }}" required>
-            <input type="text" name="nome_sofa" value="{{ $servico->nome_sofa }}" placeholder="Nome do sofá">
 
+            <label>Modelo</label>
             <input type="text" name="modelo" value="{{ $servico->modelo }}" placeholder="Modelo">
 
+            <label>Cor</label>
             <input type="text" name="cor" value="{{ $servico->cor }}" placeholder="Cor">
 
+            <label>Tecido</label>
             <input type="text" name="tecido" value="{{ $servico->tecido }}" placeholder="Tipo de tecido">
 
-            <input type="number" name="quantidade" value="{{ $servico->quantidade }}" required>
+            <label>Quantidade</label>
+            <input type="number" name="quantidade" id="quantidade" value="{{ $servico->quantidade }}" required>
 
-            <input type="number" step="0.01" name="valor_total" value="{{ $servico->valor_total }}" required>
-            <input type="number" step="0.01" name="valor_unitario" value="{{ $servico->valor_unitario }}"
-                placeholder="Valor Unitário">
+            <label>Valor unitário</label>
+            <input type="number" step="0.01" name="valor_unitario" id="valor_unitario"
+                value="{{ $servico->valor_unitario }}" placeholder="Valor Unitário">
 
+            <label>Valor total</label>
+            <input type="number" id="valor_total" step="0.01" name="valor_total" required>
+
+            <label>Observações</label>
             <textarea name="observacoes" placeholder="Observações">{{ $servico->observacoes }}</textarea>
 
+            <label>Data de entrega</label>
+
             <input type="date" name="data_entrega" value="{{ $servico->data_entrega }}">
+
+            <label>Status</label>
 
             <select name="status">
 
@@ -47,6 +66,8 @@
                 <option value="entregue" {{ $servico->status == 'entregue' ? 'selected' : '' }}>
                     Entregue
                 </option>
+
+            </select>>
 
             </select>
 

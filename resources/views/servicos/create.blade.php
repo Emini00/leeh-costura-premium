@@ -12,6 +12,7 @@
 
             @csrf
 
+            <label>Funcionário</label>
             <select name="funcionario_id" required>
 
                 <option value="">
@@ -29,7 +30,7 @@
                 @endforeach
 
             </select>
-
+            <label>Carga</label>
             <select name="carga_id" required>
 
                 <option value="">
@@ -49,25 +50,32 @@
 
             </select>
 
-            <input type="text" name="nome_sofa" placeholder="Nome do sofá">
-
+       
+            <label>Modelo</label>
             <input type="text" name="modelo" placeholder="Modelo">
-
+            <label>cor</label>
             <input type="text" name="cor" placeholder="Cor">
-
+            <label>tipo de tecido</label>
             <input type="text" name="tecido" placeholder="Tipo de tecido">
-
+            <label>quantidade</label>
             <input type="number" name="quantidade" id="quantidade" placeholder="Quantidade" required>
-
-
+            <label>Valor Unitário</label>
             <input type="number" step="0.01" name="valor_unitario" id="valor_unitario" placeholder="Valor Unitário">
-
+            <label>Valor Total</label>
             <input type="number" step="0.01" name="valor_total" id="valor_total" placeholder="Valor Total" readonly>
-
+            <label>Desconto</label>
+            <input type="number" step="0.01" name="desconto" placeholder="Desconto">
+            <label> Motivo doDesconto</label>
+            <input type="text" name="motivo_desconto" placeholder="Motivo do desconto">
+            <label>Acréscimo</label>
+            <input type="number" step="0.01" name="acrescimo" placeholder="Acréscimo">
+            <label>Motivo do Acréscimo</label>
+            <input type="text" name="motivo_acrescimo" placeholder="Motivo do acréscimo">
+            <label>Observações</label>
             <textarea name="observacoes" placeholder="Observações"></textarea>
-
+            <label>Data de Entrega</label>
             <input type="date" name="data_entrega">
-
+            <label>Status</label>
             <select name="status">
 
                 <option value="em_producao">

@@ -7,15 +7,15 @@
     <section class="page-container">
 
         <h1>Nova Fábrica</h1>
-
+       
         <form action="/fabricas" method="POST" class="form-container">
 
             @csrf
-
+             <label>Nome da Fabrica</label>
             <input type="text" name="nome" placeholder="Nome da fábrica" required>
-
+             <label>Telefone</label>
             <input type="text" name="telefone" placeholder="Telefone">
-
+             <label>Cidade</label>
             <input type="text" name="cidade" placeholder="Cidade">
 
 
