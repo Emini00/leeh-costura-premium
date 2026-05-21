@@ -4,38 +4,28 @@
 
 @section('content')
 
-<section class="page-container">
+    <section class="page-container">
 
-    <h1>Cadastrar Cliente</h1>
+        <h1>Cadastrar Cliente</h1>
 
-    <form action="/clientes" method="POST" class="form-container">
+        <form action="/clientes" method="POST" class="form-container">
 
-        @csrf
+            @csrf
+             <label>Nome do Cliente</label>
+            <input type="text" name="nome" placeholder="Nome do cliente" required>
+             <label>Telefone</label>
+            <input type="text" name="telefone" placeholder="Telefone" required>
+             <label>email</label>
+            <input type="email" name="email" placeholder="E-mail">
+             <label>cidade</label>
+            <input type="text" name="cidade" placeholder="Cidade">
 
-        <input type="text"
-            name="nome"
-            placeholder="Nome do cliente"
-            required>
+            <button type="submit" class="cadastrar-btn">
+                Salvar Cliente
+            </button>
 
-        <input type="text"
-            name="telefone"
-            placeholder="Telefone"
-            required>
+        </form>
 
-        <input type="email"
-            name="email"
-            placeholder="E-mail">
-
-        <input type="text"
-            name="cidade"
-            placeholder="Cidade">
-
-        <button type="submit" class="cadastrar-btn">
-            Salvar Cliente
-        </button>
-
-    </form>
-
-</section>
+    </section>
 
 @endsection
