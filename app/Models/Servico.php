@@ -10,14 +10,20 @@ class Servico extends Model
         'funcionario_id',
         'carga_id',
         'quantidade',
-        'valor_total',
         'status',
         'nome_sofa',
         'modelo',
         'cor',
         'tecido',
         'valor_unitario',
+        'valor_total',
+        'desconto',
+        'motivo_desconto',
+        'acrescimo',
+        'motivo_acrescimo',
+        'valor_final',
         'observacoes',
         'data_entrega',
+
     ];
 }

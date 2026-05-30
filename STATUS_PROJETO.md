@@ -182,3 +182,56 @@ Criar área funcionário
 Criar pagamentos
 
 Criar dashboard
+
+
+---
+
+## Backlog de melhorias
+
+### Serviços
+
+[ ] Confirmar salvamento de desconto
+
+[ ] Confirmar salvamento de acréscimo
+
+[ ] Confirmar salvamento de valor final
+
+[ ] Remover definitivamente nome_sofa
+
+[ ] Melhorar exibição da listagem
+
+[ ] Adicionar área de detalhes com scroll interno
+
+
+### Usabilidade
+
+[ ] Adicionar botão voltar nas telas create
+
+[ ] Adicionar botão voltar nas telas edit
+
+
+### Fechamento
+
+[ ] Finalizar estrutura da tabela fechamentos
+
+[ ] Criar cálculo automático do fechamento
+
+[ ] Relacionar fechamento com serviços
+
+
+### Funcionários
+
+[ ] Criar área do funcionário
+
+[ ] Mostrar produção individual
+
+[ ] Mostrar valor acumulado
+
+[ ] Mostrar descontos e acréscimos
+
+
+### Administração
+
+[ ] Criar dashboard principal
+
+[ ] Criar indicadores de produção

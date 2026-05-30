@@ -27,34 +27,34 @@ class ServicoController extends Controller
     }
 
     public function store(Request $request)
-{
-    $valorFinal =
-        ($request->quantidade * $request->valor_unitario)
-        - ($request->desconto ?? 0)
-        + ($request->acrescimo ?? 0);
+    {
+        $valorFinal =
+            ($request->quantidade * $request->valor_unitario)
+            - ($request->desconto ?? 0)
+            + ($request->acrescimo ?? 0);
 
-    Servico::create([
-        'funcionario_id' => $request->funcionario_id,
-        'carga_id' => $request->carga_id,
-        'nome_sofa' => $request->nome_sofa,
-        'modelo' => $request->modelo,
-        'cor' => $request->cor,
-        'tecido' => $request->tecido,
-        'quantidade' => $request->quantidade,
-        'valor_unitario' => $request->valor_unitario,
-        'valor_total' => $request->valor_total,
-        'desconto' => $request->desconto ?? 0,
-        'motivo_desconto' => $request->motivo_desconto,
-        'acrescimo' => $request->acrescimo ?? 0,
-        'motivo_acrescimo' => $request->motivo_acrescimo,
-        'valor_final' => $valorFinal,
-        'observacoes' => $request->observacoes,
-        'data_entrega' => $request->data_entrega,
-        'status' => $request->status,
-    ]);
+        Servico::create([
+            'funcionario_id' => $request->funcionario_id,
+            'carga_id' => $request->carga_id,
+            'nome_sofa' => $request->nome_sofa,
+            'modelo' => $request->modelo,
+            'cor' => $request->cor,
+            'tecido' => $request->tecido,
+            'quantidade' => $request->quantidade,
+            'valor_unitario' => $request->valor_unitario,
+            'valor_total' => $request->valor_total,
+            'desconto' => $request->desconto ?? 0,
+            'motivo_desconto' => $request->motivo_desconto,
+            'acrescimo' => $request->acrescimo ?? 0,
+            'motivo_acrescimo' => $request->motivo_acrescimo,
+            'valor_final' => $valorFinal,
+            'observacoes' => $request->observacoes,
+            'data_entrega' => $request->data_entrega,
+            'status' => $request->status,
+        ]);
 
-    return redirect('/servicos');
-}
+        return redirect('/servicos');
+    }
     public function edit($id)
     {
         $servico = Servico::findOrFail($id);
@@ -69,12 +69,18 @@ class ServicoController extends Controller
     public function update(Request $request, $id)
     {
         $servico = Servico::findOrFail($id);
+        $valorTotal = $request->quantidade * $request->valor_unitario;
+
+$valorFinal =
+    $valorTotal
+    - ($request->desconto ?? 0)
+    + ($request->acrescimo ?? 0);
 
         $servico->update([
             'funcionario_id' => $request->funcionario_id,
             'carga_id' => $request->carga_id,
             'quantidade' => $request->quantidade,
-            'valor_total' => $request->valor_total,
+          'valor_total' => $valorTotal,
             'status' => $request->status,
             'nome_sofa' => $request->nome_sofa,
             'modelo' => $request->modelo,
@@ -84,6 +90,11 @@ class ServicoController extends Controller
             'valor_unitario' => $request->valor_unitario,
             'observacoes' => $request->observacoes,
             'data_entrega' => $request->data_entrega,
+            'desconto' => $request->desconto ?? 0,
+            'motivo_desconto' => $request->motivo_desconto,
+            'acrescimo' => $request->acrescimo ?? 0,
+            'motivo_acrescimo' => $request->motivo_acrescimo,
+            'valor_final' => $valorFinal,
         ]);
 
         return redirect('/servicos');

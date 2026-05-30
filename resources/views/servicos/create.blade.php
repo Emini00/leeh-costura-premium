@@ -50,7 +50,7 @@
 
             </select>
 
-       
+
             <label>Modelo</label>
             <input type="text" name="modelo" placeholder="Modelo">
             <label>cor</label>
@@ -64,13 +64,16 @@
             <label>Valor Total</label>
             <input type="number" step="0.01" name="valor_total" id="valor_total" placeholder="Valor Total" readonly>
             <label>Desconto</label>
-            <input type="number" step="0.01" name="desconto" placeholder="Desconto">
+            <input type="number" step="0.01" name="desconto" id="desconto" placeholder="Desconto">
             <label> Motivo doDesconto</label>
             <input type="text" name="motivo_desconto" placeholder="Motivo do desconto">
             <label>Acréscimo</label>
-            <input type="number" step="0.01" name="acrescimo" placeholder="Acréscimo">
+            <input type="number" step="0.01" name="acrescimo" id="acrescimo" placeholder="Acréscimo">
             <label>Motivo do Acréscimo</label>
             <input type="text" name="motivo_acrescimo" placeholder="Motivo do acréscimo">
+
+            <label>Valor final</label>
+            <input type="number" step="0.01" name="valor_final" id="valor_final" placeholder="Valor final" readonly>
             <label>Observações</label>
             <textarea name="observacoes" placeholder="Observações"></textarea>
             <label>Data de Entrega</label>

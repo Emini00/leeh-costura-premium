@@ -44,6 +44,26 @@
             <label>Valor total</label>
             <input type="number" id="valor_total" step="0.01" name="valor_total" required>
 
+            <label>Desconto</label>
+            <input type="number" step="0.01" name="desconto" id="desconto" value="{{ $servico->desconto }}"
+                placeholder="Desconto">
+
+            <label>Motivo do desconto</label>
+            <input type="text" name="motivo_desconto" value="{{ $servico->motivo_desconto }}"
+                placeholder="Motivo do desconto">
+
+            <label>Acréscimo</label>
+            <input type="number" step="0.01" name="acrescimo" id="acrescimo" value="{{ $servico->acrescimo }}"
+                placeholder="Acréscimo">
+
+            <label>Motivo do acréscimo</label>
+            <input type="text" name="motivo_acrescimo" value="{{ $servico->motivo_acrescimo }}"
+                placeholder="Motivo do acréscimo">
+
+            <label>Valor final</label>
+            <input type="number" step="0.01" name="valor_final" id="valor_final" value="{{ $servico->valor_final }}"
+                readonly>
+
             <label>Observações</label>
             <textarea name="observacoes" placeholder="Observações">{{ $servico->observacoes }}</textarea>
 
@@ -67,7 +87,7 @@
                     Entregue
                 </option>
 
-            </select>>
+            </select>
 
             </select>
 

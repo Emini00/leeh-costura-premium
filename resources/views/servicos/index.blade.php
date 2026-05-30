@@ -34,46 +34,75 @@
 
                     </div>
 
-                    <span>
-                        Quantidade:
+                    <p>
+                        <strong>Quantidade:</strong>
                         {{ $servico->quantidade }}
-                    </span>
-                    <br>
+                    </p>
 
-                    Nome do sofá:
-                    {{ $servico->nome_sofa }}
+                    <p>
+                        <strong>Modelo:</strong>
+                        {{ $servico->modelo }}
+                    </p>
 
-                    <br>
+                    <p>
+                        <strong>Cor:</strong>
+                        {{ $servico->cor }}
+                    </p>
 
-                    Modelo:
-                    {{ $servico->modelo }}
+                    <p>
+                        <strong>Tecido:</strong>
+                        {{ $servico->tecido }}
+                    </p>
 
-                    <br>
+                    <p>
+                        <strong>Valor unitário:</strong>
+                        R$ {{ $servico->valor_unitario }}
+                    </p>
 
-                    Cor:
-                    {{ $servico->cor }}
-
-                    <br>
-
-                    Tecido:
-                    {{ $servico->tecido }}
-
-                    <br>
-
-                    Valor unitário:
-                    R$ {{ $servico->valor_unitario }}
-
-                    <small>
-                        Valor:
+                    <p>
+                        <strong>Valor total:</strong>
                         R$ {{ $servico->valor_total }}
-                    </small>
+                    </p>
+
+                    <p>
+                        <strong>Desconto:</strong>
+                        R$ {{ $servico->desconto }}
+                    </p>
+
+                    <p>
+                        <strong>Motivo do desconto:</strong>
+                        {{ $servico->motivo_desconto }}
+                    </p>
+
+                    <p>
+                        <strong>Acréscimo:</strong>
+                        R$ {{ $servico->acrescimo }}
+                    </p>
+
+                    <p>
+                        <strong>Motivo do acréscimo:</strong>
+                        {{ $servico->motivo_acrescimo }}
+                    </p>
+
+                    <p>
+                        <strong>Valor final:</strong>
+                        R$ {{ $servico->valor_final }}
+                    </p>
+
+                    <p>
+                        <strong>Observações:</strong>
+                        {{ $servico->observacoes }}
+                    </p>
+
+                    <p>
+                        <strong>Data de entrega:</strong>
+                        {{ $servico->data_entrega }}
+                    </p>
 
                     <div>
 
                         <a href="/servicos/{{ $servico->id }}/edit" class="primary-button">
-
                             Editar
-
                         </a>
 
                         <form action="/servicos/{{ $servico->id }}" method="POST" style="display:inline;">
@@ -82,9 +111,7 @@
                             @method('DELETE')
 
                             <button type="submit" class="primary-button">
-
                                 Excluir
-
                             </button>
 
                         </form>
@@ -92,7 +119,6 @@
                     </div>
 
                 </div>
-
             @endforeach
 
         </div>
