@@ -142,18 +142,19 @@ Cada funcionário normalmente produz:
 Exceções:
 
 produção emergencial
-
 → usar acréscimo
 
 
 Pagamento:
 
 valor por sofá
-
 não usar:
-
 valor por peça
 
+Identificação do sofá:
+
+✔ modelo identifica o sofá
+✘ não existe mais campo nome_sofa
 
 ---
 
@@ -190,17 +191,36 @@ Criar dashboard
 
 ### Serviços
 
-[ ] Confirmar salvamento de desconto
+[X] Confirmar salvamento de desconto
 
-[ ] Confirmar salvamento de acréscimo
+[X] Confirmar salvamento de acréscimo
 
-[ ] Confirmar salvamento de valor final
+[X] Confirmar salvamento de valor final
 
-[ ] Remover definitivamente nome_sofa
+[X] Remover definitivamente nome_sofa
 
-[ ] Melhorar exibição da listagem
+[x] Utilizar modelo como identificador do sofá
 
-[ ] Adicionar área de detalhes com scroll interno
+[] Melhorar exibição da listagem
+
+[] Adicionar área de detalhes com scroll interno
+
+### Cargas
+
+[ ] Criar campo de identificação da carga
+
+A identificação deve aceitar:
+
+- números
+- letras
+- combinações alfanuméricas
+
+Exemplos:
+
+01
+Carga A
+Ferrari
+Urgente
 
 
 ### Usabilidade

@@ -26,4 +26,13 @@ class Servico extends Model
         'data_entrega',
 
     ];
+      public function funcionario()
+    {
+        return $this->belongsTo(Funcionario::class);
+    }
+
+    public function carga()
+    {
+        return $this->belongsTo(Carga::class);
+    }
 }

@@ -9,9 +9,10 @@ class ServicoController extends Controller
 {
     public function index()
     {
-        $servicos = Servico::all();
-
-        return view('servicos.index', compact('servicos'));
+        $servicos = Servico::with([
+            'funcionario',
+            'carga'
+        ])->get();
     }
 
     public function create()
@@ -71,16 +72,16 @@ class ServicoController extends Controller
         $servico = Servico::findOrFail($id);
         $valorTotal = $request->quantidade * $request->valor_unitario;
 
-$valorFinal =
-    $valorTotal
-    - ($request->desconto ?? 0)
-    + ($request->acrescimo ?? 0);
+        $valorFinal =
+            $valorTotal
+            - ($request->desconto ?? 0)
+            + ($request->acrescimo ?? 0);
 
         $servico->update([
             'funcionario_id' => $request->funcionario_id,
             'carga_id' => $request->carga_id,
             'quantidade' => $request->quantidade,
-          'valor_total' => $valorTotal,
+            'valor_total' => $valorTotal,
             'status' => $request->status,
             'nome_sofa' => $request->nome_sofa,
             'modelo' => $request->modelo,
