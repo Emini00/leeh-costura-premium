@@ -191,19 +191,19 @@ Criar dashboard
 
 ### Serviços
 
-[X] Confirmar salvamento de desconto
+[x] Confirmar salvamento de desconto
 
-[X] Confirmar salvamento de acréscimo
+[x] Confirmar salvamento de acréscimo
 
-[X] Confirmar salvamento de valor final
+[x] Confirmar salvamento de valor final
 
-[X] Remover definitivamente nome_sofa
+[x] Remover definitivamente nome_sofa
 
 [x] Utilizar modelo como identificador do sofá
 
-[] Melhorar exibição da listagem
+[ ] Melhorar exibição da listagem
 
-[] Adicionar área de detalhes com scroll interno
+[ ] Adicionar área de detalhes com scroll interno
 
 ### Cargas
 

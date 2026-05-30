@@ -9,12 +9,14 @@ class ServicoController extends Controller
 {
     public function index()
     {
-        $servicos = Servico::with([
-            'funcionario',
-            'carga'
-        ])->get();
-    }
+      
+    $servicos = Servico::with([
+        'funcionario',
+        'carga'
+    ])->get();
 
+    return view('servicos.index', compact('servicos'));
+    }
     public function create()
     {
         $funcionarios = \App\Models\Funcionario::all();
