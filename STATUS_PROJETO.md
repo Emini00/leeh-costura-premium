@@ -216,7 +216,7 @@ Criar dashboard
 
 [x] Melhorar exibição da listagem
 
-[ ] Adicionar área de detalhes com scroll interno
+[x] Adicionar área de detalhes recolhível
 
 ### Cargas
 
