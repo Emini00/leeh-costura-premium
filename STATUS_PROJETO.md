@@ -1,7 +1,7 @@
 # STATUS PROJETO — Leeh Costura Premium
 
 Última atualização:
-20/05/2026
+31/05/2026
 
 
 ---
@@ -160,33 +160,27 @@ Identificação do sofá:
 
 ## Melhorias de UX
 
-### Formulários
-
 ✔ labels no create
 
 ✔ labels no edit
+
 
 Motivo:
 
 placeholder desaparecia ao apagar
 
----
+✔ Exibição de serviços em cards responsivos
 
-### Tela de Login
+✔ Exibição do funcionário na listagem de serviços
 
-✔ Novo layout premium
+✔ Formatação de moeda brasileira
 
-✔ Fundo personalizado com identidade visual da Leeh Costura Premium
+✔ Formatação de data brasileira
 
-✔ Efeito glassmorphism no card de login
+✔ Área de detalhes recolhível nos serviços
 
-✔ Transparência refinada do card
+✔ Indicador visual de progresso por status
 
-✔ Novo logo na tela de login
-
-✔ Ajuste visual do botão de acesso
-
-✔ Melhor experiência visual e identidade da marca
 
 ---
 
@@ -220,7 +214,7 @@ Criar dashboard
 
 [x] Utilizar modelo como identificador do sofá
 
-[ ] Melhorar exibição da listagem
+[x] Melhorar exibição da listagem
 
 [ ] Adicionar área de detalhes com scroll interno
 

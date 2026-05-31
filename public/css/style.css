@@ -278,6 +278,11 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
+.action-button {
+    padding: 8px 14px;
+    min-width: auto;
+    font-size: 14px;
+}
 
 .primary-button:hover{
     background: #5c1f1a;
@@ -355,10 +360,10 @@ body {
     margin-bottom: 20px;
 }
 
-.employee-list{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.employee-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .employee-item{
@@ -369,6 +374,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+.employee-item p {
+    margin: 3px 0;
 }
 
 .employee-item span{
@@ -381,19 +389,22 @@ body {
 
 .employee-top{
     display: flex;
-    justify-content: space-between;
+   justify-content: flex-start;
     align-items: center;
     gap: 10px;
 }
 
 .employee-status{
-    background: #E8F5E9;
-    color: #2E7D32;
-    padding: 5px 10px;
-    border-radius: 20px;
+    text-align: left;
     font-size: 12px;
     font-weight: bold;
+}  
+
+.status-dots {
+    text-align: left;
+    font-size: 18px;
 }
+
 
 /* HEADER */
 
@@ -469,7 +480,19 @@ body {
     cursor: pointer;
     color: white;
 }
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
 
+    .main-nav {
+        display: none;
+    }
+
+    #menu-toggle:checked ~ .main-nav {
+        display: flex;
+    }
+}
 /* MOBILE */
 
 @media (max-width: 768px){
