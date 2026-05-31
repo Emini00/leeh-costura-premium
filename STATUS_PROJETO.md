@@ -160,17 +160,36 @@ Identificação do sofá:
 
 ## Melhorias de UX
 
+### Formulários
+
 ✔ labels no create
 
 ✔ labels no edit
-
 
 Motivo:
 
 placeholder desaparecia ao apagar
 
+---
+
+### Tela de Login
+
+✔ Novo layout premium
+
+✔ Fundo personalizado com identidade visual da Leeh Costura Premium
+
+✔ Efeito glassmorphism no card de login
+
+✔ Transparência refinada do card
+
+✔ Novo logo na tela de login
+
+✔ Ajuste visual do botão de acesso
+
+✔ Melhor experiência visual e identidade da marca
 
 ---
+
 
 ## Próximos passos
 
