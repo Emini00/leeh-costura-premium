@@ -6,11 +6,13 @@
 
     <section class="login-page">
 
+
+
         <div class="login-box">
 
-            <h1>LEEH COSTURA PREMIUM</h1>
+            <img src="{{ asset('images/leeh-logo-intro.jpeg') }}" alt="Leeh Costura Premium" class="login-logo">
 
-           
+
             <form action="/login" method="POST">
 
                 @csrf
