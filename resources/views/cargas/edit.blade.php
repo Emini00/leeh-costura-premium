@@ -8,19 +8,23 @@
 
         <h1>Editar Carga</h1>
 
+        <a href="/cargas" class="back-button">
+            ←
+        </a>
+
         <form action="/cargas/{{ $carga->id }}" method="POST" class="form-container">
 
             @csrf
             @method('PUT')
-              <label>Fábrica</label>
+            <label>Fábrica</label>
             <input type="number" name="fabrica_id" value="{{ $carga->fabrica_id }}" required>
-              <label>Modelo</label>
+            <label>Modelo</label>
             <input type="text" name="modelo" value="{{ $carga->modelo }}" required>
-              <label>Quantidade</label>
+            <label>Quantidade</label>
             <input type="number" name="quantidade" value="{{ $carga->quantidade }}" required>
-              <label>Vr. Unitário</label>
+            <label>Vr. Unitário</label>
             <input type="number" step="0.01" name="valor_unitario" value="{{ $carga->valor_unitario }}" required>
-              <label>Status</label>
+            <label>Status</label>
             <select name="status">
 
                 <option value="pendente" {{ $carga->status == 'pendente' ? 'selected' : '' }}>

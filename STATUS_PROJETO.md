@@ -161,9 +161,8 @@ Identificação do sofá:
 ## Melhorias de UX
 
 ✔ labels no create
-
 ✔ labels no edit
-
+✔ Botão de navegação por seta nas telas internas
 
 Motivo:
 
@@ -238,8 +237,7 @@ Urgente
 
 ### Usabilidade
 
-[ ] Adicionar botão voltar nas telas create
-
+[ ] Adicionar botão voltar em todos os edit
 [ ] Adicionar botão voltar nas telas edit
 
 

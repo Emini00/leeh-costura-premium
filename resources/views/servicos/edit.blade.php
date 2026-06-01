@@ -8,13 +8,13 @@
 
         <h1>Editar Serviço</h1>
 
-        <a href="/servicos" class="primary-button">
-            ← Voltar
+        <a href="{{ url()->previous() }}" class="back-button">
+            ←
         </a>
 
         <form action="/servicos/{{ $servico->id }}" method="POST" class="form-container">
 
-        carga_idclientes
+
             @csrf
             @method('PUT')
 
