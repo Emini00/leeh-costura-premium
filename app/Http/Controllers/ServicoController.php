@@ -58,17 +58,20 @@ class ServicoController extends Controller
 
         return redirect('/servicos');
     }
-    public function edit($id)
-    {
-        $servico = Servico::findOrFail($id);
+  public function edit($id)
+{
+    $servico = Servico::findOrFail($id);
 
-        $funcionarios = \App\Models\Funcionario::all();
+    $funcionarios = \App\Models\Funcionario::all();
 
-        return view('servicos.edit', compact(
-            'servico',
-            'funcionarios'
-        ));
-    }
+    $cargas = \App\Models\Carga::all();
+
+    return view('servicos.edit', compact(
+        'servico',
+        'funcionarios',
+        'cargas'
+    ));
+}
     public function update(Request $request, $id)
     {
         $servico = Servico::findOrFail($id);

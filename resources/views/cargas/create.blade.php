@@ -18,6 +18,9 @@
 
             <select name="fabrica_id" required>
                 <option value="">Selecione uma fábrica</option>
+                <label>Identificação da Carga</label>
+
+                <input type="text" name="identificacao" placeholder="Ex: 92, Carga A, Urgente">
 
                 @foreach($fabricas as $fabrica)
                     <option value="{{ $fabrica->id }}">

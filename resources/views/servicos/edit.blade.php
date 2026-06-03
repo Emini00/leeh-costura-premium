@@ -28,8 +28,16 @@
             </select>
 
             <label>Carga</label>
-            <input type="number" name="carga_id" value="{{ $servico->carga_id }}" required>
 
+            <select name="carga_id" required>
+                <option value="">Selecione uma carga</option>
+
+                @foreach($cargas as $carga)
+                    <option value="{{ $carga->id }}" {{ $servico->carga_id == $carga->id ? 'selected' : '' }}>
+                        Carga #{{ $carga->id }} - {{ $carga->modelo }}
+                    </option>
+                @endforeach
+            </select>
             <label>Modelo</label>
             <input type="text" name="modelo" value="{{ $servico->modelo }}" placeholder="Modelo">
 

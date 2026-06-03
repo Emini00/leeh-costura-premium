@@ -8,7 +8,7 @@
 
     <div class="page-header">
 
-        <h1>Cargas</h1>
+        <h1>Lista de Cargas</h1>
 
         <a href="/cargas/create" class="primary-button">
             + Cadastrar Carga

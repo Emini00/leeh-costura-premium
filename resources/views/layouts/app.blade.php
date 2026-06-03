@@ -95,7 +95,7 @@
                         </a>
 
                         <a href="/cargas">
-                            Cargas
+                           Lista de Cargas
                         </a>
 
                         <a href="/cargas/create">
