@@ -11,7 +11,7 @@
         <h1>Fábricas</h1>
 
         <a href="/fabricas/create" class="primary-button">
-            + Nova Fábrica
+            + Cadastrar Fábrica
         </a>
 
     </div>

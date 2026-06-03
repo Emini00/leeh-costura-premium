@@ -84,14 +84,14 @@
                         </a>
 
                         <a href="/servicos/create">
-                            Novo Serviço
+                            Cadastrar Serviço
                         </a>
                         <a href="/fabricas">
                             Fábricas
                         </a>
 
                         <a href="/fabricas/create">
-                            Nova Fábrica
+                            Cadastrar Fábrica
                         </a>
 
                         <a href="/cargas">
@@ -99,7 +99,7 @@
                         </a>
 
                         <a href="/cargas/create">
-                            Nova Carga
+                            Cadastrar Carga
                         </a>
 
                     </div>

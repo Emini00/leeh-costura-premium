@@ -16,7 +16,9 @@ class CargaController extends Controller
 
     public function create()
     {
-        return view('cargas.create');
+        $fabricas = \App\Models\Fabrica::all();
+
+        return view('cargas.create', compact('fabricas'));
     }
 
     public function store(Request $request)

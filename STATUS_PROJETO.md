@@ -137,22 +137,16 @@ status pagamento
 Cada funcionário normalmente produz:
 
 1 sofá completo
-
-
 Exceções:
-
 produção emergencial
 → usar acréscimo
 
-
 Pagamento:
-
 valor por sofá
 não usar:
 valor por peça
 
 Identificação do sofá:
-
 ✔ modelo identifica o sofá
 ✘ não existe mais campo nome_sofa
 
@@ -163,26 +157,20 @@ Identificação do sofá:
 ✔ labels no create
 ✔ labels no edit
 ✔ Botão de navegação por seta nas telas internas
-
+✔ Padronização dos textos de cadastro
+(Cadastrar Funcionário, Cliente, Fábrica e Carga)
+✔ Correção dos submenus no desktop
+✔ Seleção de fábrica por nome no cadastro de cargas
 Motivo:
-
 placeholder desaparecia ao apagar
-
 ✔ Exibição de serviços em cards responsivos
-
 ✔ Exibição do funcionário na listagem de serviços
-
 ✔ Formatação de moeda brasileira
-
 ✔ Formatação de data brasileira
-
 ✔ Área de detalhes recolhível nos serviços
-
 ✔ Indicador visual de progresso por status
 
-
 ---
-
 
 ## Próximos passos
 
@@ -238,7 +226,6 @@ Urgente
 ### Usabilidade
 
 [ ] Adicionar botão voltar em todos os edit
-[ ] Adicionar botão voltar nas telas edit
 
 
 ### Fechamento
@@ -260,6 +247,86 @@ Urgente
 
 [ ] Mostrar descontos e acréscimos
 
+
+### Administração
+
+[ ] Criar dashboard principal
+
+[ ] Criar indicadores de produção
+
+## Em Desenvolvimento
+
+⚙ Serviços
+
+⚙ Fechamentos
+
+⚙ Área do Funcionário
+
+⚙ Pagamentos
+
+⚙ Dashboard
+
+---
+
+## Pendências
+
+### Mobile
+
+[ ] Corrigir submenu Serviços no menu mobile
+
+### Cargas
+
+[ ] Criar campo de identificação da carga
+
+A identificação deve aceitar:
+
+* números
+* letras
+* combinações alfanuméricas
+
+Exemplos:
+
+01
+
+Carga A
+
+Ferrari
+
+Urgente
+
+### Modelos
+
+[ ] Criar cadastro de modelos de sofá
+
+Objetivo:
+
+* evitar digitação livre
+* padronizar nomes
+* permitir seleção por lista
+
+### Usabilidade
+
+[ ] Adicionar botão voltar em todos os create
+
+[ ] Adicionar botão voltar em todos os edit
+
+### Fechamento
+
+[ ] Finalizar estrutura da tabela fechamentos
+
+[ ] Criar cálculo automático do fechamento
+
+[ ] Relacionar fechamento com serviços
+
+### Funcionários
+
+[ ] Criar área do funcionário
+
+[ ] Mostrar produção individual
+
+[ ] Mostrar valor acumulado
+
+[ ] Mostrar descontos e acréscimos
 
 ### Administração
 

@@ -6,7 +6,7 @@
 
     <section class="page-container">
 
-        <h1>Nova Fábrica</h1>
+        <h1>Cadastrar Fábrica</h1>
        
         <form action="/fabricas" method="POST" class="form-container">
 

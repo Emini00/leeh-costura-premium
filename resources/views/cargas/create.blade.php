@@ -6,7 +6,7 @@
 
     <section class="page-container">
 
-        <h1>Nova Carga</h1>
+        <h1>Cadastrar Carga</h1>
         <a href="{{ url()->previous() }}" class="back-button">
             ←
         </a>
@@ -14,8 +14,17 @@
         <form action="/cargas" method="POST" class="form-container">
 
             @csrf
-            <label>Fabrica</label>
-            <input type="number" name="fabrica_id" placeholder="ID da Fábrica" required>
+            <label>Fábrica</label>
+
+            <select name="fabrica_id" required>
+                <option value="">Selecione uma fábrica</option>
+
+                @foreach($fabricas as $fabrica)
+                    <option value="{{ $fabrica->id }}">
+                        {{ $fabrica->nome }}
+                    </option>
+                @endforeach
+            </select>
             <label>modelo do Sofá</label>
             <input type="text" name="modelo" placeholder="Modelo do sofá" required>
             <label>quantidade</label>

@@ -6,7 +6,7 @@
 
     <section class="page-container">
 
-        <h1>Novo Serviço</h1>
+        <h1>Cadastrar Serviço</h1>
 
         <form action="/servicos" method="POST" class="form-container">
 
