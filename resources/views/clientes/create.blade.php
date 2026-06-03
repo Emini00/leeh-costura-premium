@@ -6,12 +6,12 @@
 
     <section class="page-container">
 
-        <h1>Cadastrar Cliente</h1>
+        <h1>Cadastrar Aluno</h1>
 
         <form action="/clientes" method="POST" class="form-container">
 
             @csrf
-             <label>Nome do Cliente</label>
+             <label>Nome do Aluno</label>
             <input type="text" name="nome" placeholder="Nome do cliente" required>
              <label>Telefone</label>
             <input type="text" name="telefone" placeholder="Telefone" required>
@@ -21,7 +21,7 @@
             <input type="text" name="cidade" placeholder="Cidade">
 
             <button type="submit" class="cadastrar-btn">
-                Salvar Cliente
+                Salvar Aluno
             </button>
 
         </form>

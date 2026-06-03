@@ -6,13 +6,13 @@
 
     <section class="page-container">
 
-        <h1>Editar Cliente</h1>
+        <h1>Editar Aluno</h1>
 
         <form action="/clientes/{{ $cliente->id }}" method="POST" class="form-container">
 
             @csrf
             @method('PUT')
-             <label>Nome do Cliente</label>
+             <label>Nome do Aluno</label>
             <input type="text" name="nome" value="{{ $cliente->nome }}" placeholder="Nome do cliente" required>
              <label>Telefone</label>
             <input type="text" name="telefone" value="{{ $cliente->telefone }}" placeholder="Telefone" required>
@@ -22,7 +22,7 @@
             <input type="text" name="cidade" value="{{ $cliente->cidade }}" placeholder="Cidade">
 
             <button type="submit" class="cadastrar-btn">
-                Atualizar Cliente
+                Atualizar Aluno
             </button>
 
         </form>

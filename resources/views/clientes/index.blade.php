@@ -7,16 +7,16 @@
 <section class="page-container">
 
     <div class="page-header">
-        <h1>Clientes</h1>
+        <h1>Alunos</h1>
 
         <a href="/clientes/create" class="primary-button">
-            + Cadastrar Cliente
+            + Cadastrar Aluno
         </a>
     </div>
 
     <div class="table-card">
 
-        <h2>Lista de Clientes</h2>
+        <h2>Lista de Alunos</h2>
 
         <div class="employee-list">
 

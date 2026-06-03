@@ -171,6 +171,13 @@ placeholder desaparecia ao apagar
 ✔ Indicador visual de progresso por status
 ✔ Seleção de fábrica por nome nas telas de cargas
 ---
+### Decisão de negócio
+
+O módulo Clientes foi reaproveitado para Alunos.
+Motivo:
+As fábricas representam os clientes do negócio.
+O módulo será utilizado para cadastro dos alunos de costura.
+
 
 ## Próximos passos
 

@@ -54,17 +54,17 @@
                 <div class="nav-dropdown">
 
                     <button class="dropdown-button">
-                        Clientes
+                        Alunos
                     </button>
 
                     <div class="dropdown-content">
 
                         <a href="/clientes">
-                            Lista de Clientes
+                            Lista de alunos
                         </a>
 
                         <a href="/clientes/create">
-                            Cadastrar Cliente
+                            Cadastrar Aluno
                         </a>
 
                     </div>
