@@ -198,19 +198,19 @@ Criar dashboard
 
 ### Serviços
 
-[x] Confirmar salvamento de desconto
+✔ Confirmar salvamento de desconto
 
-[x] Confirmar salvamento de acréscimo
+✔ Confirmar salvamento de acréscimo
 
-[x] Confirmar salvamento de valor final
+✔ Confirmar salvamento de valor final
 
-[x] Remover definitivamente nome_sofa
+✔ Remover definitivamente nome_sofa
 
-[x] Utilizar modelo como identificador do sofá
+✔ Utilizar modelo como identificador do sofá
 
-[x] Melhorar exibição da listagem
+✔ Melhorar exibição da listagem
 
-[x] Adicionar área de detalhes recolhível
+✔ Adicionar área de detalhes recolhível
 
 ### Cargas
 
@@ -232,7 +232,7 @@ Urgente
 
 ### Usabilidade
 
-[ ] Adicionar botão voltar em todos os edit
+✔ Adicionar botão voltar em todos os edit e create
 
 
 ### Fechamento

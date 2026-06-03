@@ -7,18 +7,21 @@
     <section class="page-container">
 
         <h1>Editar Aluno</h1>
+        <a href="/fabricas" class="back-button">
+            ←
+        </a>
 
         <form action="/clientes/{{ $cliente->id }}" method="POST" class="form-container">
 
             @csrf
             @method('PUT')
-             <label>Nome do Aluno</label>
+            <label>Nome do Aluno</label>
             <input type="text" name="nome" value="{{ $cliente->nome }}" placeholder="Nome do cliente" required>
-             <label>Telefone</label>
+            <label>Telefone</label>
             <input type="text" name="telefone" value="{{ $cliente->telefone }}" placeholder="Telefone" required>
-             <label>E-mail</label>
+            <label>E-mail</label>
             <input type="email" name="email" value="{{ $cliente->email }}" placeholder="E-mail">
-             <label>Cidade</label>
+            <label>Cidade</label>
             <input type="text" name="cidade" value="{{ $cliente->cidade }}" placeholder="Cidade">
 
             <button type="submit" class="cadastrar-btn">

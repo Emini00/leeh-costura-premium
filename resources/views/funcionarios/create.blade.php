@@ -6,6 +6,9 @@
     <section class="page-container">
 
         <h1>Cadastrar Funcionário</h1>
+        <a href="/fabricas" class="back-button">
+            ←
+        </a>
 
         <form action="/funcionarios" method="POST" class="form-container">
 

@@ -7,6 +7,9 @@
     <section class="page-container">
 
         <h1>Editar Fábrica</h1>
+        <a href="/fabricas" class="back-button">
+            ←
+        </a>
 
         <form action="/fabricas/{{ $fabrica->id }}" method="POST" class="form-container">
 

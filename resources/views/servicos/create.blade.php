@@ -7,6 +7,11 @@
     <section class="page-container">
 
         <h1>Cadastrar Serviço</h1>
+        <a href="/fabricas" class="back-button">
+            ←
+        </a>
+        
+
 
         <form action="/servicos" method="POST" class="form-container">
 
