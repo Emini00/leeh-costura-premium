@@ -35,12 +35,13 @@ class CargaController extends Controller
     }
 
     public function edit($id)
-    {
-        $carga = Carga::findOrFail($id);
+{
+    $carga = Carga::findOrFail($id);
 
-        return view('cargas.edit', compact('carga'));
-    }
+    $fabricas = \App\Models\Fabrica::all();
 
+    return view('cargas.edit', compact('carga', 'fabricas'));
+}
     public function update(Request $request, $id)
     {
         $carga = Carga::findOrFail($id);

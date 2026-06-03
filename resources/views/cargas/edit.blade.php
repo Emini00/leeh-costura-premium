@@ -16,8 +16,18 @@
 
             @csrf
             @method('PUT')
-            <label>Fábrica</label>
-            <input type="number" name="fabrica_id" value="{{ $carga->fabrica_id }}" required>
+           <label>Fábrica</label>
+
+<select name="fabrica_id" required>
+    <option value="">Selecione uma fábrica</option>
+
+    @foreach($fabricas as $fabrica)
+        <option value="{{ $fabrica->id }}"
+            {{ $carga->fabrica_id == $fabrica->id ? 'selected' : '' }}>
+            {{ $fabrica->nome }}
+        </option>
+    @endforeach
+</select>
             <label>Modelo</label>
             <input type="text" name="modelo" value="{{ $carga->modelo }}" required>
             <label>Quantidade</label>

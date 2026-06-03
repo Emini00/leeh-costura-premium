@@ -1,7 +1,7 @@
 # STATUS PROJETO — Leeh Costura Premium
 
 Última atualização:
-31/05/2026
+03/06/2026
 
 
 ---
@@ -169,7 +169,7 @@ placeholder desaparecia ao apagar
 ✔ Formatação de data brasileira
 ✔ Área de detalhes recolhível nos serviços
 ✔ Indicador visual de progresso por status
-
+✔ Seleção de fábrica por nome nas telas de cargas
 ---
 
 ## Próximos passos
