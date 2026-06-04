@@ -170,6 +170,9 @@ placeholder desaparecia ao apagar
 ✔ Área de detalhes recolhível nos serviços
 ✔ Indicador visual de progresso por status
 ✔ Seleção de fábrica por nome nas telas de cargas
+✔ Seleção de fábrica por nome nas telas de cadastro e edição de cargas
+✔ Identificação personalizada de cargas
+(aceita números, letras e combinações alfanuméricas)
 ---
 ### Decisão de negócio
 
@@ -214,16 +217,13 @@ Criar dashboard
 
 ### Cargas
 
-[ ] Criar campo de identificação da carga
+✔ Criar campo de identificação da carga
 
 A identificação deve aceitar:
-
 - números
 - letras
 - combinações alfanuméricas
-
 Exemplos:
-
 01
 Carga A
 Ferrari

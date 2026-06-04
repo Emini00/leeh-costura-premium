@@ -18,16 +18,17 @@
 
             <select name="fabrica_id" required>
                 <option value="">Selecione uma fábrica</option>
-                <label>Identificação da Carga</label>
-
-                <input type="text" name="identificacao" placeholder="Ex: 92, Carga A, Urgente">
 
                 @foreach($fabricas as $fabrica)
                     <option value="{{ $fabrica->id }}">
                         {{ $fabrica->nome }}
-                    </option>
+                    </option><to_cargas_table class="php"></to_cargas_table>
                 @endforeach
             </select>
+
+            <label>Identificação da Carga</label>
+
+            <input type="text" name="identificacao" placeholder="Ex: 92, Carga A, Urgente">
             <label>modelo do Sofá</label>
             <input type="text" name="modelo" placeholder="Modelo do sofá" required>
             <label>quantidade</label>
