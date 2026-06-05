@@ -13,6 +13,27 @@ feature/servicos-calculo-producao
 
 ---
 
+## Regras do negócio
+
+Cada funcionário normalmente produz:
+
+1 sofá completo
+Exceções:
+produção emergencial
+→ usar acréscimo
+
+Pagamento:
+valor por sofá
+não usar:
+valor por peça
+
+Identificação do sofá:
+✔ modelo identifica o sofá
+✘ não existe mais campo nome_sofa
+
+---
+
+
 ## Concluído
 
 ### Funcionários
@@ -42,13 +63,6 @@ feature/servicos-calculo-producao
 ✔ Relacionamento com fábrica
 
 ✔ Labels
-
-
-Regras:
-
-- carga pode repetir entre fábricas
-- carga não define modelo
-
 
 ---
 
@@ -93,14 +107,6 @@ valor_total
 + acrescimo
 
 
-Observações:
-
-removido:
-nome_sofa
-
-modelo =
-nome do sofá
-
 
 ---
 
@@ -129,27 +135,6 @@ valor final
 
 status pagamento
 
-
----
-
-## Regras do negócio
-
-Cada funcionário normalmente produz:
-
-1 sofá completo
-Exceções:
-produção emergencial
-→ usar acréscimo
-
-Pagamento:
-valor por sofá
-não usar:
-valor por peça
-
-Identificação do sofá:
-✔ modelo identifica o sofá
-✘ não existe mais campo nome_sofa
-
 ---
 
 ## Melhorias de UX
@@ -158,7 +143,7 @@ Identificação do sofá:
 ✔ labels no edit
 ✔ Botão de navegação por seta nas telas internas
 ✔ Padronização dos textos de cadastro
-(Cadastrar Funcionário, Cliente, Fábrica e Carga)
+  (Cadastrar Funcionário, Cliente, Fábrica e Carga)
 ✔ Correção dos submenus no desktop
 ✔ Seleção de fábrica por nome no cadastro de cargas
 Motivo:
@@ -172,7 +157,8 @@ placeholder desaparecia ao apagar
 ✔ Seleção de fábrica por nome nas telas de cargas
 ✔ Seleção de fábrica por nome nas telas de cadastro e edição de cargas
 ✔ Identificação personalizada de cargas
-(aceita números, letras e combinações alfanuméricas)
+  (aceita números, letras e combinações alfanuméricas)
+✔ Adicionar botão voltar em todos os edit e create
 ---
 ### Decisão de negócio
 
@@ -180,22 +166,6 @@ O módulo Clientes foi reaproveitado para Alunos.
 Motivo:
 As fábricas representam os clientes do negócio.
 O módulo será utilizado para cadastro dos alunos de costura.
-
-
-## Próximos passos
-
-Finalizar serviços
-
-Criar fechamento
-
-Criar área funcionário
-
-Criar pagamentos
-
-Criar dashboard
-
-
----
 
 ## Backlog de melhorias
 
@@ -215,6 +185,12 @@ Criar dashboard
 
 ✔ Adicionar área de detalhes recolhível
 
+✔ Corrigir submenu Serviços no menu mobile
+
+✔ Corrigir exibição dos links do submenu
+
+✔ Corrigir abertura do menu sanduíche
+
 ### Cargas
 
 ✔ Criar campo de identificação da carga
@@ -228,13 +204,23 @@ Exemplos:
 Carga A
 Ferrari
 Urgente
+  
+  ---
+
+## Próximos passos
+
+Finalizar serviços
+
+Criar fechamento
+
+Criar área funcionário
+
+Criar pagamentos
+
+Criar dashboard
 
 
-### Usabilidade
-
-✔ Adicionar botão voltar em todos os edit e create
-
-
+---
 ### Fechamento
 
 [ ] Finalizar estrutura da tabela fechamentos
@@ -279,31 +265,19 @@ Urgente
 
 ### Mobile
 
-[ ] Corrigir submenu Serviços no menu mobile
 
 ### Cargas
 
-[ ] Criar campo de identificação da carga
+[ ] Adicionar coluna modulo em servicos
 
-A identificação deve aceitar:
+[ ] Mostrar um <select> no Create e Edit
 
-* números
-* letras
-* combinações alfanuméricas
-
-Exemplos:
-
-01
-
-Carga A
-
-Ferrari
-
-Urgente
+[ ] Exibir o módulo na listagem e nos detalhes do serviço
 
 ### Modelos
 
 [ ] Criar cadastro de modelos de sofá
+[ ] add campo módulo
 
 Objetivo:
 
@@ -311,11 +285,8 @@ Objetivo:
 * padronizar nomes
 * permitir seleção por lista
 
-### Usabilidade
 
-[ ] Adicionar botão voltar em todos os create
 
-[ ] Adicionar botão voltar em todos os edit
 
 ### Fechamento
 

@@ -1,3 +1,4 @@
+console.log('app.js carregou');
 const dropdownButtons =
     document.querySelectorAll('.dropdown-button');
 
