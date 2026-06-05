@@ -7,16 +7,21 @@
 
     <section class="page-container">
 
-        <div class="page-header">
+       <div class="page-header">
 
-            <h1>Serviços</h1>
+    <div class="page-title-actions">
+        <h1>Lista de Serviços</h1>
 
-            <a href="/servicos/create" class="primary-button">
-                + Novo Serviço
-            </a>
+        <a href="/dashboard" class="back-button">
+            ←
+        </a>
+    </div>
 
-        </div>
+    <a href="/servicos/create" class="primary-button">
+        + Novo Serviço
+    </a>
 
+</div>
         <div class="employee-list">
 
             @foreach($servicos as $servico)

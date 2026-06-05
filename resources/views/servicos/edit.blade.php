@@ -40,6 +40,16 @@
             </select>
             <label>Modelo</label>
             <input type="text" name="modelo" value="{{ $servico->modelo }}" placeholder="Modelo">
+            <label>Módulo</label>
+
+            <select name="modulo">
+                <option value="">Selecione o módulo</option>
+                <option value="70 cm" {{ $servico->modulo == '70 cm' ? 'selected' : '' }}>70 cm</option>
+                <option value="80 cm" {{ $servico->modulo == '80 cm' ? 'selected' : '' }}>80 cm</option>
+                <option value="90 cm" {{ $servico->modulo == '90 cm' ? 'selected' : '' }}>90 cm</option>
+                <option value="1,00 m" {{ $servico->modulo == '1,00 m' ? 'selected' : '' }}>1,00 m</option>
+                <option value="1,20 m" {{ $servico->modulo == '1,20 m' ? 'selected' : '' }}>1,20 m</option>
+            </select>
 
             <label>Cor</label>
             <input type="text" name="cor" value="{{ $servico->cor }}" placeholder="Cor">

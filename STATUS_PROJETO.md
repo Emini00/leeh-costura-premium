@@ -1,7 +1,7 @@
 # STATUS PROJETO — Leeh Costura Premium
 
 Última atualização:
-03/06/2026
+05/06/2026
 
 
 ---
@@ -106,8 +106,6 @@ valor_total
 − desconto
 + acrescimo
 
-
-
 ---
 
 ### Fechamento
@@ -191,6 +189,10 @@ O módulo será utilizado para cadastro dos alunos de costura.
 
 ✔ Corrigir abertura do menu sanduíche
 
+✔  Adicionar coluna modulo em servicos
+
+✔ Mostrar um <select> no Create e Edit
+
 ### Cargas
 
 ✔ Criar campo de identificação da carga
@@ -263,21 +265,24 @@ Criar dashboard
 
 ## Pendências
 
-### Mobile
+### Alta Prioridade
 
+[ ] Criar controle de entregas por fábrica
+
+Objetivo:
+- acompanhar cronograma das fábricas
+- controlar prazos de entrega
+- evitar atrasos
+- visualizar serviços pendentes por data
 
 ### Cargas
-
-[ ] Adicionar coluna modulo em servicos
-
-[ ] Mostrar um <select> no Create e Edit
 
 [ ] Exibir o módulo na listagem e nos detalhes do serviço
 
 ### Modelos
 
 [ ] Criar cadastro de modelos de sofá
-[ ] add campo módulo
+
 
 Objetivo:
 

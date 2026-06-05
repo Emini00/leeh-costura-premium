@@ -7,7 +7,7 @@
     <section class="page-container">
 
         <h1>Cadastrar Aluno</h1>
-        <a href="/fabricas" class="back-button">
+        <a href="/clientes" class="back-button">
             ←
         </a>
 

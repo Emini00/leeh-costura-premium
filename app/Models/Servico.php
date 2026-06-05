@@ -13,6 +13,7 @@ class Servico extends Model
         'status',
         'nome_sofa',
         'modelo',
+        'modulo',
         'cor',
         'tecido',
         'valor_unitario',

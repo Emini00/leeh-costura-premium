@@ -87,7 +87,7 @@
                             Cadastrar Serviço
                         </a>
                         <a href="/fabricas">
-                            Fábricas
+                            Lista de Fábricas
                         </a>
 
                         <a href="/fabricas/create">

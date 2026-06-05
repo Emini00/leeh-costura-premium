@@ -6,14 +6,19 @@
     <section class="page-container">
 
         <div class="page-header">
-            <div>
-                <h1>Funcionários</h1>
-                <p>Gerencie a equipe da facção de costura.</p>
+
+            <div class="page-title-actions">
+                <h1>Lista de Funcionários</h1>
+
+                <a href="/dashboard" class="back-button">
+                    ←
+                </a>
             </div>
 
-            <a href="/funcionarios/create" class="primary-button">
-                + Cadastrar
+            <a href="/servicos/create" class="primary-button">
+                + cadastrar Funcionário
             </a>
+
         </div>
 
         <div class="table-card">

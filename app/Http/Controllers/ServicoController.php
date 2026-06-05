@@ -41,6 +41,7 @@ class ServicoController extends Controller
             'carga_id' => $request->carga_id,
             'nome_sofa' => $request->nome_sofa,
             'modelo' => $request->modelo,
+            'modulo' => $request->modulo,
             'cor' => $request->cor,
             'tecido' => $request->tecido,
             'quantidade' => $request->quantidade,
@@ -90,6 +91,7 @@ class ServicoController extends Controller
             'status' => $request->status,
             'nome_sofa' => $request->nome_sofa,
             'modelo' => $request->modelo,
+            'modulo' => $request->modulo,
             'cor' => $request->cor,
             'tecido' => $request->tecido,
 

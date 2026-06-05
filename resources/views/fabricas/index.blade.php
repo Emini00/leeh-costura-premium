@@ -4,69 +4,70 @@
 
 @section('content')
 
-<section class="page-container">
+    <section class="page-container">
 
-    <div class="page-header">
+        <div class="page-header">
 
-        <h1>Fábricas</h1>
+            <div class="page-title-actions">
+                <h1>Lista de Fabricas</h1>
 
-        <a href="/fabricas/create" class="primary-button">
-            + Cadastrar Fábrica
-        </a>
+                <a href="/dashboard" class="back-button">
+                    ←
+                </a>
+            </div>
 
-    </div>
+            <a href="/servicos/create" class="primary-button">
+                + cadastrar fabrica
+            </a>
 
-    <div class="employee-list">
+        </div>
+        <div class="employee-list">
 
-        @foreach($fabricas as $fabrica)
+            @foreach($fabricas as $fabrica)
 
-            <div class="employee-item">
+                <div class="employee-item">
 
-                <strong>
-                    {{ $fabrica->nome }}
-                </strong>
+                    <strong>
+                        {{ $fabrica->nome }}
+                    </strong>
 
-                <span>
-                    {{ $fabrica->telefone }}
-                </span>
+                    <span>
+                        {{ $fabrica->telefone }}
+                    </span>
 
-                <small>
-                    {{ $fabrica->cidade }}
-                </small>
+                    <small>
+                        {{ $fabrica->cidade }}
+                    </small>
 
-                <div>
+                    <div>
 
-                    <a href="/fabricas/{{ $fabrica->id }}/edit"
-                        class="primary-button">
+                        <a href="/fabricas/{{ $fabrica->id }}/edit" class="primary-button">
 
-                        Editar
+                            Editar
 
-                    </a>
+                        </a>
 
-                    <form action="/fabricas/{{ $fabrica->id }}"
-                        method="POST"
-                        style="display:inline;">
+                        <form action="/fabricas/{{ $fabrica->id }}" method="POST" style="display:inline;">
 
-                        @csrf
-                        @method('DELETE')
+                            @csrf
+                            @method('DELETE')
 
-                        <button type="submit"
-                            class="primary-button">
+                            <button type="submit" class="primary-button">
 
-                            Excluir
+                                Excluir
 
-                        </button>
+                            </button>
 
-                    </form>
+                        </form>
+
+                    </div>
 
                 </div>
 
-            </div>
+            @endforeach
 
-        @endforeach
+        </div>
 
-    </div>
-
-</section>
+    </section>
 
 @endsection

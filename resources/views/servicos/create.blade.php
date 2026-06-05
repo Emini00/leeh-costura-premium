@@ -7,10 +7,10 @@
     <section class="page-container">
 
         <h1>Cadastrar Serviço</h1>
-        <a href="/fabricas" class="back-button">
+        <a href="/servicos" class="back-button">
             ←
         </a>
-        
+
 
 
         <form action="/servicos" method="POST" class="form-container">
@@ -58,6 +58,17 @@
 
             <label>Modelo</label>
             <input type="text" name="modelo" placeholder="Modelo">
+
+            <label>Módulo</label>
+
+            <select name="modulo">
+                <option value="">Selecione o módulo</option>
+                <option value="70 cm">70 cm</option>
+                <option value="80 cm">80 cm</option>
+                <option value="90 cm">90 cm</option>
+                <option value="1,00 m">1,00 m</option>
+                <option value="1,20 m">1,20 m</option>
+            </select>
             <label>cor</label>
             <input type="text" name="cor" placeholder="Cor">
             <label>tipo de tecido</label>

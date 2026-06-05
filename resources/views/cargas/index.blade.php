@@ -6,15 +6,21 @@
 
 <section class="page-container">
 
-    <div class="page-header">
+   <div class="page-header">
 
+    <div class="page-title-actions">
         <h1>Lista de Cargas</h1>
 
-        <a href="/cargas/create" class="primary-button">
-            + Cadastrar Carga
+        <a href="/dashboard" class="back-button">
+            ←
         </a>
-
     </div>
+
+    <a href="/servicos/create" class="primary-button">
+        + Cadastrar Cargas
+    </a>
+
+</div>
 
     <div class="employee-list">
 
