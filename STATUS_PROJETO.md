@@ -1,8 +1,12 @@
 # STATUS PROJETO — Leeh Costura Premium
+## Versão Atual
 
-Última atualização:
+🏆 Versão atual: v1.0.0
+
+Data da versão:
 05/06/2026
 
+Primeira versão estável do Leeh Costura Premium.
 
 ---
 
@@ -201,11 +205,7 @@ O módulo será utilizado para cadastro dos alunos de costura.
 
 ✔ Exibir módulo nos detalhes visíveis
 
-✔ Salvar módulo
 
-✔ Atualizar módulo
-
-✔ Exibir módulo nos detalhes visíveis
 
 ### Cargas
 
@@ -221,7 +221,7 @@ O módulo será utilizado para cadastro dos alunos de costura.
 
 ✔ Atualizar módulo
 
-✔ Exibir módulo na listagems
+✔ Exibir módulo na listagem
   ---
 
   ### Versão 2.0.0
@@ -278,7 +278,6 @@ Criar dashboard
 
 ## Em Desenvolvimento
 
-⚙ Serviços
 
 ⚙ Fechamentos
 
