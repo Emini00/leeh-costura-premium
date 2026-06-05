@@ -22,15 +22,25 @@
                 @foreach($fabricas as $fabrica)
                     <option value="{{ $fabrica->id }}">
                         {{ $fabrica->nome }}
-                    </option><to_cargas_table class="php"></to_cargas_table>
+                    </option>
+                    <to_cargas_table class="php"></to_cargas_table>
                 @endforeach
             </select>
 
             <label>Identificação da Carga</label>
 
             <input type="text" name="identificacao" placeholder="Ex: 92, Carga A, Urgente">
-            <label>modelo do Sofá</label>
+            <label>modelo</label>
             <input type="text" name="modelo" placeholder="Modelo do sofá" required>
+            <label>Módulo</label>
+            <select name="modulo">
+                <option value="">Selecione o módulo</option>
+                <option value="70 cm">70 cm</option>
+                <option value="80 cm">80 cm</option>
+                <option value="90 cm">90 cm</option>
+                <option value="1,00 m">1,00 m</option>
+                <option value="1,20 m">1,20 m</option>
+            </select>
             <label>quantidade</label>
             <input type="number" name="quantidade" placeholder="Quantidade" required>
             <label>Vr. Unitario</label>

@@ -4,85 +4,85 @@
 
 @section('content')
 
-<section class="page-container">
+    <section class="page-container">
 
-   <div class="page-header">
+        <div class="page-header">
 
-    <div class="page-title-actions">
-        <h1>Lista de Cargas</h1>
+            <div class="page-title-actions">
+                <h1>Lista de Cargas</h1>
 
-        <a href="/dashboard" class="back-button">
-            ←
-        </a>
-    </div>
+                <a href="/dashboard" class="back-button">
+                    ←
+                </a>
+            </div>
+            @foreach($cargas as $carga)
 
-    <a href="/servicos/create" class="primary-button">
-        + Cadastrar Cargas
-    </a>
+                <div class="employee-item">
 
-</div>
+                    <div class="employee-top">
 
-    <div class="employee-list">
+                        <strong>
+                            {{ $carga->modelo }}
+                        </strong>
+                        <strong>
+                            {{ $carga->modulo }}
+                        </strong>
 
-        @foreach($cargas as $carga)
 
-            <div class="employee-item">
+                        <span class="employee-status">
+                            {{ $carga->status }}
+                        </span>
+                        <a href="/servicos/create" class="primary-button">
+                            + Cadastrar Cargas
+                        </a>
 
-                <div class="employee-top">
+                    </div>
 
-                    <strong>
-                        {{ $carga->modelo }}
-                    </strong>
+                    <div class="employee-list">
 
-                    <span class="employee-status">
-                        {{ $carga->status }}
+
+
+                    </div>
+
+                    <span>
+                        Quantidade:
+                        {{ $carga->quantidade }}
                     </span>
 
-                </div>
+                    <small>
+                        Valor Unitário:
+                        R$ {{ $carga->valor_unitario }}
+                    </small>
 
-                <span>
-                    Quantidade:
-                    {{ $carga->quantidade }}
-                </span>
+                    <div>
 
-                <small>
-                    Valor Unitário:
-                    R$ {{ $carga->valor_unitario }}
-                </small>
+                        <a href="/cargas/{{ $carga->id }}/edit" class="primary-button">
 
-                <div>
+                            Editar
 
-                    <a href="/cargas/{{ $carga->id }}/edit"
-                        class="primary-button">
+                        </a>
 
-                        Editar
+                        <form action="/cargas/{{ $carga->id }}" method="POST" style="display:inline;">
 
-                    </a>
+                            @csrf
+                            @method('DELETE')
 
-                    <form action="/cargas/{{ $carga->id }}"
-                        method="POST"
-                        style="display:inline;">
+                            <button type="submit" class="primary-button">
 
-                        @csrf
-                        @method('DELETE')
+                                Excluir
 
-                        <button type="submit"
-                            class="primary-button">
+                            </button>
 
-                            Excluir
+                        </form>
 
-                        </button>
-
-                    </form>
+                    </div>
 
                 </div>
 
-            </div>
+            @endforeach
 
-        @endforeach
+        </div>
 
-    </div>
-
-</section>
+    </section>
 
 @endsection

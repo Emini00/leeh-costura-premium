@@ -18,7 +18,7 @@
     </div>
 
     <a href="/servicos/create" class="primary-button">
-        + Novo Serviço
+        + Cadastrar Serviço
     </a>
 
 </div>
@@ -77,7 +77,12 @@
                         <strong>Modelo:</strong>
                         {{ $servico->modelo }}
                     </p>
-
+                    
+                     <p>
+                          <strong>Módulo:</strong>
+                          {{ $servico->modulo }}
+                    </p>
+                    
                     <p>
                         <strong>Valor final:</strong>
                         R$ {{ number_format($servico->valor_final, 2, ',', '.') }}

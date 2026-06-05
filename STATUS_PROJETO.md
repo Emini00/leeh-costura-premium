@@ -189,25 +189,52 @@ O módulo será utilizado para cadastro dos alunos de costura.
 
 ✔ Corrigir abertura do menu sanduíche
 
-✔  Adicionar coluna modulo em servicos
+✔ Adicionar coluna módulo em serviços
 
-✔ Mostrar um <select> no Create e Edit
+✔ Mostrar select no Create e Edit
+
+✔ Salvar módulo
+
+✔ Atualizar módulo
+
+✔ Exibir módulo na listagem de serviços
+
+✔ Exibir módulo nos detalhes visíveis
+
+✔ Salvar módulo
+
+✔ Atualizar módulo
+
+✔ Exibir módulo nos detalhes visíveis
 
 ### Cargas
 
 ✔ Criar campo de identificação da carga
 
-A identificação deve aceitar:
-- números
-- letras
-- combinações alfanuméricas
-Exemplos:
-01
-Carga A
-Ferrari
-Urgente
-  
+✔ Adicionar coluna módulo
+
+✔ Mostrar select no Create
+
+✔ Mostrar select no Edit
+
+✔ Salvar módulo
+
+✔ Atualizar módulo
+
+✔ Exibir módulo na listagems
   ---
+
+  ### Versão 2.0.0
+
+[ ] Revisar visualização da lista de serviços
+
+[ ] Criar produção por funcionário
+
+[ ] Criar resumo diário de produção
+
+[ ] Criar controle de entregas
+
+[ ] Melhorar rastreabilidade por carga
 
 ## Próximos passos
 
@@ -275,23 +302,15 @@ Objetivo:
 - evitar atrasos
 - visualizar serviços pendentes por data
 
-### Cargas
-
-[ ] Exibir o módulo na listagem e nos detalhes do serviço
 
 ### Modelos
 
 [ ] Criar cadastro de modelos de sofá
-
-
 Objetivo:
 
 * evitar digitação livre
 * padronizar nomes
 * permitir seleção por lista
-
-
-
 
 ### Fechamento
 

@@ -16,20 +16,29 @@
 
             @csrf
             @method('PUT')
-           <label>Fábrica</label>
+            <label>Fábrica</label>
 
-<select name="fabrica_id" required>
-    <option value="">Selecione uma fábrica</option>
+            <select name="fabrica_id" required>
+                <option value="">Selecione uma fábrica</option>
 
-    @foreach($fabricas as $fabrica)
-        <option value="{{ $fabrica->id }}"
-            {{ $carga->fabrica_id == $fabrica->id ? 'selected' : '' }}>
-            {{ $fabrica->nome }}
-        </option>
-    @endforeach
-</select>
+                @foreach($fabricas as $fabrica)
+                    <option value="{{ $fabrica->id }}" {{ $carga->fabrica_id == $fabrica->id ? 'selected' : '' }}>
+                        {{ $fabrica->nome }}
+                    </option>
+                @endforeach
+            </select>
             <label>Modelo</label>
             <input type="text" name="modelo" value="{{ $carga->modelo }}" required>
+            <label>Módulo</label>
+
+            <select name="modulo">
+                <option value="">Selecione o módulo</option>
+                <option value="70 cm">70 cm</option>
+                <option value="80 cm">80 cm</option>
+                <option value="90 cm">90 cm</option>
+                <option value="1,00 m">1,00 m</option>
+                <option value="1,20 m">1,20 m</option>
+            </select>
             <label>Quantidade</label>
             <input type="number" name="quantidade" value="{{ $carga->quantidade }}" required>
             <label>Vr. Unitário</label>

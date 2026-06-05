@@ -27,6 +27,7 @@ class CargaController extends Controller
             'fabrica_id' => $request->fabrica_id,
             'numero' => $request->identificacao,
             'modelo' => $request->modelo,
+             'modulo' =>$request->modulo,
             'quantidade' => $request->quantidade,
             'valor_unitario' => $request->valor_unitario,
             'status' => $request->status,
@@ -51,6 +52,7 @@ class CargaController extends Controller
         $carga->update([
             'fabrica_id' => $request->fabrica_id,
             'modelo' => $request->modelo,
+            'modulo' =>$request->modulo,
             'quantidade' => $request->quantidade,
             'valor_unitario' => $request->valor_unitario,
             'status' => $request->status,

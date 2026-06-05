@@ -10,6 +10,7 @@ class Carga extends Model
         'fabrica_id',
         'identificacao',
         'modelo',
+        'modulo',
         'quantidade',
         'valor_unitario',
         'status',
