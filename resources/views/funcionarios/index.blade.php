@@ -15,7 +15,7 @@
                 </a>
             </div>
 
-            <a href="/servicos/create" class="primary-button">
+            <a href="funcionarios/create" class="primary-button">
                 + cadastrar Funcionário
             </a>
 

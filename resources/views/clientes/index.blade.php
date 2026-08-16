@@ -16,7 +16,7 @@
                 </a>
             </div>
 
-            <a href="/servicos/create" class="primary-button">
+            <a href="/alunos/create" class="primary-button">
                 + cadastrar Aluno
             </a>
 

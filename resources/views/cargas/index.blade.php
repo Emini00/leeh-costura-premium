@@ -32,7 +32,7 @@
                         <span class="employee-status">
                             {{ $carga->status }}
                         </span>
-                        <a href="/servicos/create" class="primary-button">
+                        <a href="/cargas/create" class="primary-button">
                             + Cadastrar Cargas
                         </a>
 
