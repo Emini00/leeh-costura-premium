@@ -78,37 +78,36 @@
 
                                     <button type="submit" class="primary-button">
                                         Excluir
-                                    </button>
+                                        </button>
 
-                                    </form>
+                                        </form>
 
-                                    </div>
-                                    </td>
-                                    </tr>
+                                        </div>
+                                        </td>
+                                        </tr>
 
                 @endforeach
 
-                                    </tbody>
+                                        </tbody>
 
-                                    </table>
+                                        </table>
 
-                                    </div>
-                                    <div class="services-summary">
-
-                                        <div class="summary-card">
-                                            <span>Total de peças / conjuntos</span>
-                                            <strong>{{ $totalPecas }}</strong>
                                         </div>
+                                        <div class="services-summary">
 
-                                        <div class="summary-card">
-                                            <span>Total geral</span>
-                                            <strong>
-                                                R$ {{ number_format($totalGeral, 2, ',', '.') }}
-                                            </strong>
+                                            <div class="summary-card">
+                                                <span>Total de peças / conjuntos</span>
+                                                <strong>{{ $totalPecas }}</strong>
+                                            </div>
+
+                                            <div class="summary-card">
+                                                <span>Total geral</span>
+                                                <strong>
+                                                    R$ {{ number_format($totalGeral, 2, ',', '.') }}
+                                                </strong>
+                                            </div>
+
                                         </div>
-
-                                    </div>
-
-                                    </section>
+                                        </section>
 
 @endsection
