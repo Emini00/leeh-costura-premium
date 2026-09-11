@@ -350,6 +350,160 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
+/* TABELAS DE DADOS */
+
+.data-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background: #FFF9F5;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.data-table {
+    width: 100%;
+    min-width: 1100px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #FFFFFF;
+}
+
+.data-table thead th {
+    background: #701F35;
+    color: #FFFFFF;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.data-table thead th:first-child {
+    border-top-left-radius: 14px;
+}
+
+.data-table thead th:last-child {
+    border-top-right-radius: 14px;
+}
+
+.data-table tbody td {
+    padding: 13px 16px;
+    color: #555555;
+    border-bottom: 1px solid #EDEDED;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tbody tr:hover {
+    background: #FFF9F5;
+}
+
+/* STATUS */
+
+.data-table .employee-status {
+    display: inline-block;
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* AÇÕES */
+
+.data-table-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.data-table-actions form {
+    margin: 0;
+}
+
+.data-table-actions .primary-button {
+    padding: 7px 10px;
+    min-width: auto;
+    width: auto;
+    border-radius: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+/* RESUMO DA TABELA DE SERVIÇOS */
+
+.services-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 12px;
+    background: #FFF9F5;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card {
+    min-height: 100px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    background: #F8ECEC;
+    color: #701F35;
+}
+
+.summary-card span {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.summary-card strong {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.summary-card:last-child {
+    background: #701F35;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .services-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        min-height: 85px;
+    }
+}
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .data-table-wrapper {
+        border-radius: 12px;
+    }
+
+    .data-table {
+        min-width: 1000px;
+    }
+
+    .data-table thead th,
+    .data-table tbody td {
+        padding: 10px 12px;
+    }
+}
 
 /* HEADER */
 

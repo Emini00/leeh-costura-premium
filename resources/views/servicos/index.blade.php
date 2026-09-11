@@ -4,99 +4,111 @@
 
 @section('content')
 
-    <section class="page-container">
+        <section class="page-container">
 
-        <div class="page-header">
+            <div class="page-header">
 
-            <h1>Serviços</h1>
+                <h1>Serviços</h1>
 
-            <a href="/servicos/create" class="primary-button">
-                + Novo Serviço
-            </a>
+                <a href="/servicos/create" class="primary-button">
+                    + Novo Serviço
+                </a>
 
-        </div>
+            </div>
+    <div class="data-table-wrapper">
 
-        <div class="employee-list">
+        <table class="data-table">
 
-            @foreach($servicos as $servico)
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Nome do sofá</th>
+                    <th>Modelo</th>
+                    <th>Quantidade</th>
+                    <th>Cor</th>
+                    <th>Tecido</th>
+                    <th>Valor unitário</th>
+                    <th>Valor total</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
 
-                <div class="employee-item">
+            <tbody>
 
-                    <div class="employee-top">
+                @foreach($servicos as $servico)
 
-                        <strong>
-                            Serviço #{{ $servico->id }}
-                        </strong>
+                    <tr>
+                        <td>#{{ $servico->id }}</td>
 
-                        <span class="employee-status">
-                            {{ $servico->status }}
-                        </span>
+                        <td>{{ $servico->nome_sofa }}</td>
 
-                    </div>
+                        <td>{{ $servico->modelo }}</td>
 
-                    <span>
-                        Quantidade:
-                        {{ $servico->quantidade }}
-                    </span>
-                    <br>
+                        <td>{{ $servico->quantidade }}</td>
 
-                    Nome do sofá:
-                    {{ $servico->nome_sofa }}
+                        <td>{{ $servico->cor }}</td>
 
-                    <br>
+                        <td>{{ $servico->tecido }}</td>
 
-                    Modelo:
-                    {{ $servico->modelo }}
+                        <td>
+                            R$ {{ number_format($servico->valor_unitario, 2, ',', '.') }}
+                        </td>
 
-                    <br>
+                        <td>
+                            R$ {{ number_format($servico->valor_total, 2, ',', '.') }}
+                        </td>
 
-                    Cor:
-                    {{ $servico->cor }}
+                        <td>
+                            <span class="employee-status">
+                                {{ $servico->status }}
+                            </span>
+                        </td>
 
-                    <br>
+                        <td>
+                            <div class="data-table-actions">
 
-                    Tecido:
-                    {{ $servico->tecido }}
+                                <a href="/servicos/{{ $servico->id }}/edit" class="primary-button">
+                                    Editar
+                                </a>
 
-                    <br>
+                                <form action="/servicos/{{ $servico->id }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
 
-                    Valor unitário:
-                    R$ {{ $servico->valor_unitario }}
+                                    <button type="submit" class="primary-button">
+                                        Excluir
+                                    </button>
 
-                    <small>
-                        Valor:
-                        R$ {{ $servico->valor_total }}
-                    </small>
+                                    </form>
 
-                    <div>
+                                    </div>
+                                    </td>
+                                    </tr>
 
-                        <a href="/servicos/{{ $servico->id }}/edit" class="primary-button">
+                @endforeach
 
-                            Editar
+                                    </tbody>
 
-                        </a>
+                                    </table>
 
-                        <form action="/servicos/{{ $servico->id }}" method="POST" style="display:inline;">
+                                    </div>
+                                    <div class="services-summary">
 
-                            @csrf
-                            @method('DELETE')
+                                        <div class="summary-card">
+                                            <span>Total de peças / conjuntos</span>
+                                            <strong>{{ $totalPecas }}</strong>
+                                        </div>
 
-                            <button type="submit" class="primary-button">
+                                        <div class="summary-card">
+                                            <span>Total geral</span>
+                                            <strong>
+                                                R$ {{ number_format($totalGeral, 2, ',', '.') }}
+                                            </strong>
+                                        </div>
 
-                                Excluir
+                                    </div>
 
-                            </button>
-
-                        </form>
-
-                    </div>
-
-                </div>
-
-            @endforeach
-
-        </div>
-
-    </section>
+                                    </section>
 
 @endsection

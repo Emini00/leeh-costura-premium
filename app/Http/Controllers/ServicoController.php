@@ -11,9 +11,15 @@ class ServicoController extends Controller
     {
         $servicos = Servico::all();
 
-        return view('servicos.index', compact('servicos'));
-    }
+    $totalPecas = $servicos->sum('quantidade');
+    $totalGeral = $servicos->sum('valor_total');
 
+    return view('servicos.index', compact(
+        'servicos',
+        'totalPecas',
+        'totalGeral'
+    ));
+    }
     public function create()
     {
         $funcionarios = \App\Models\Funcionario::all();
