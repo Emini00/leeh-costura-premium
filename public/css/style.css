@@ -745,3 +745,204 @@ body {
     }
 
 }
+
+/* ==============================
+   MENU LATERAL - LCP-11
+   ============================== */
+
+#menu-toggle {
+    display: none;
+}
+
+.app-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: #701F35;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 15px;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+}
+
+/* LOGO */
+
+.sidebar-logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sidebar-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* NAVEGAÇÃO */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.sidebar-nav > a,
+.sidebar-nav .dropdown-button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 12px 14px;
+
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.sidebar-nav > a:hover,
+.sidebar-nav .dropdown-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* SUBMENUS */
+
+.app-sidebar .nav-dropdown {
+    width: 100%;
+}
+
+.app-sidebar .dropdown-content {
+    position: static;
+
+    display: none;
+
+    width: 100%;
+
+    margin-top: 4px;
+    padding-left: 10px;
+
+    background: transparent;
+    box-shadow: none;
+}
+
+.app-sidebar .dropdown-content.show-dropdown {
+    display: block;
+}
+
+.app-sidebar .dropdown-content a {
+    display: block;
+
+    padding: 9px 12px;
+
+    color: #F8E9ED;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.app-sidebar .dropdown-content a:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+/* RODAPÉ DO MENU */
+
+.sidebar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-footer .nav-user {
+    padding: 0;
+    font-size: 14px;
+}
+
+.sidebar-footer .logout-button {
+    width: 100%;
+}
+
+/* CONTEÚDO */
+
+#menu-toggle ~ main {
+    margin-left: 250px;
+}
+
+#menu-toggle ~ .main-footer {
+    margin-left: 250px;
+}
+
+/* BOTÃO MOBILE */
+
+.mobile-menu-button {
+    display: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .app-sidebar {
+        left: -250px;
+
+        transition: left 0.3s ease;
+    }
+
+    #menu-toggle:checked ~ .app-sidebar {
+        left: 0;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+
+        position: fixed;
+        top: 15px;
+        left: 15px;
+
+        width: 45px;
+        height: 45px;
+
+        align-items: center;
+        justify-content: center;
+
+        background: #701F35;
+        color: white;
+
+        border-radius: 10px;
+
+        font-size: 24px;
+        cursor: pointer;
+
+        z-index: 1100;
+    }
+
+    #menu-toggle ~ main,
+    #menu-toggle ~ .main-footer {
+        margin-left: 0;
+    }
+}
