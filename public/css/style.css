@@ -751,7 +751,7 @@ body {
    ============================== */
 
 #menu-toggle {
-    display: none;
+   transform: translateX(0);
 }
 
 .app-sidebar {
@@ -773,6 +773,8 @@ body {
     z-index: 1000;
 
     overflow-y: auto;
+
+    transform: none;
 }
 
 /* LOGO */
@@ -907,23 +909,23 @@ body {
 
 @media (max-width: 768px) {
 
-    .app-sidebar {
-        left: -250px;
-
-        transition: left 0.3s ease;
-    }
+  .app-sidebar {
+    width: min(72vw, 240px);
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
 
     #menu-toggle:checked ~ .app-sidebar {
-        left: 0;
+        transform: translateX(0);
     }
 
     .mobile-menu-button {
         display: flex;
-
         position: fixed;
-        top: 15px;
-        left: 15px;
-
+        top:15px;
+        left:auto;
+        right:15px;
         width: 45px;
         height: 45px;
 
@@ -938,7 +940,7 @@ body {
         font-size: 24px;
         cursor: pointer;
 
-        z-index: 1100;
+        z-index: 1200;
     }
 
     #menu-toggle ~ main,
